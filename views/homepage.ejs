@@ -18,11 +18,14 @@
 <section class="main section">
     <article>
         <div class="container">
-            <div class="conten">
+            <div class="conten" id="image">
+                <button class="click1" type="button" onclick="next()">></button>
+                <button class="click2" type="button" onclick="next()"><</button>
                 <img src="specification-banner.jpg">
-            </div>
+
             <div class="conten2">
                 <a href="#">đồng hồ xịn xò</a>
+            </div>
             </div>
             <div class="conten3">
                 <img src="blog11.jpg">
@@ -55,6 +58,31 @@
 </footer>
 </body>
 <script type="text/javascript">
-
+    var index=0;
+ var next=function (){
+     var imgs=["specification-banner.jpg","slider1-bg.jpg","slider2-bg.jpg"];
+    document.getElementById("image").innerHTML="<button class=\"click1\" type=\"button\" onclick=\"back()\">></button>" +
+        "<button class=\"click2\" type=\"button\" onclick=\"backs()\"><</button> " +
+        "<img src=\"slider2-bg.jpg\">\n"+
+   "  <div class=\"conten2\">\n"+
+       "  <a href=\"#\">ahihi</a>\n"+
+" </div>";
+ }
+ var back=function (){
+     document.getElementById("image").innerHTML="<button class=\"click1\" type=\"button\" onclick=\"backs()\">></button>" +
+         "<button class=\"click2\" type=\"button\" onclick=\"next()\"><</button> " +
+         "<img src=\"slider1-bg.jpg\">\n"+
+         "  <div class=\"conten2\">\n"+
+         "  <a href=\"#\">hahaha</a>\n"+
+         " </div>";
+ }
+    var backs=function (){
+        document.getElementById("image").innerHTML="<button class=\"click1\" type=\"button\" onclick=\"next()\">></button>" +
+            "<button class=\"click2\" type=\"button\" onclick=\"back()\"><</button> " +
+            "<img src=\"specification-banner.jpg\">\n"+
+            "  <div class=\"conten2\">\n"+
+            "  <a href=\"#\">đồng hồ xịn xò</a>\n"+
+            " </div>";
+    }
 </script>
 </html>

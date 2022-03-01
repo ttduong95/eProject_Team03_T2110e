@@ -6,6 +6,7 @@ app.listen(port,function (err) {
 })
 app.use(express.static("public"));// cho quyền truy cập toàn bộ các file tĩnh bên trong thư mục public
 app.use(express.static("imge"));
+app.set("view engine","ejs");
 app.get("/",function (req, res) {
-    res.sendFile(__dirname+"/views/homepage.html");
+    res.render("homepage");
 })

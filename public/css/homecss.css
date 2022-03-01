@@ -16,48 +16,59 @@ a{
     list-style: none;
     text-decoration: none;
     font-family: Roboto, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     color: white;
 }
 p{
     font-size: 20px;
     font-weight: 200;
-    font-family: 'Courgette', cursive;
+    font-family: Roboto, sans-serif;
+    color: #ffffff;
 }
 img{
     max-width: 100%;
-    height: 500px;
+    height: 600px;
 }
 .section{
     margin: 0 auto;
     padding: 0;
 
 }
+/* header*/
 header{
-    background-color: #9c9a9a;
+    background-color: #2d2626;
 
 }
 header img{
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 60px;
 }
 .logo{
     margin: 0 auto;
-    height: 150px;
-    width: 1200px;
+    height: 80px;
+    width: 1400px;
     padding: 10px;
 }
 .logo1{
     float: left;
 }
-.logo2 li{
+.logo2 li{ /* logo*/
     float: left;
     padding-left: 50px;
     list-style: none;
-    padding-top: 50px ;
+    padding-top: 20px ;
     font-size: 20px;
 }
-
+.logo2 input{ /* tim kiem*/
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+}
+.logo2 button{
+    width: 70px;
+    height: 30px;
+}
+/* bieu tuong fb*/
 .logo3{
     float: right;
 
@@ -65,12 +76,13 @@ header img{
 .logo3 li{
     float: left;
     padding-left: 20px ;
-    padding-top: 50px ;
+    padding-top: 15px ;
     list-style: none;
 }
 .logo3 li a{
 font-size: 25px;
 }
+/* main section*/
 section{
     margin: 0 auto;
     width: 100%;
@@ -78,6 +90,8 @@ section{
 .container{
     margin: 0 auto;
     position: relative;
+    font-size: 30px;
+    color: white;
 }
 .container img{
     width: 100%;
@@ -93,8 +107,53 @@ section{
     color: white;
 
 }
+/* click next anh*/
+.conten button{
+    width: 50px;
+    height: 50px;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+.conten button:hover{
+    transform: scale(1.21);
+    transition: 500ms;
+    color: #b3a408;
+}
+.conten .click1{
+    position: absolute;
+    right: 5px;
+    bottom: 300px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.conten .click2{
+    position: absolute;
+    left: 5px;
+    bottom: 300px;
+    background-color: rgba(52, 45, 45, 0.02);
+}
 .conten2 a{
     font-size: 30px;
     line-height: 30px;
     font-family: 'Courgette', cursive;
+}
+.conten3{
+    position: relative;
+    width: 49.99%;
+    float: left;
+}
+.conten3 .conten31{
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+}
+.conten4{
+    position: relative;
+    width: 49.99%;
+    float: right;
+}
+.conten4 .conten41{
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
 }
