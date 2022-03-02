@@ -19,7 +19,7 @@
     <article>
         <div class="container">
             <div class="conten" id="image">
-                <button class="click1" type="button" onclick="next()">></button>
+                <button class="click1" type="button" onclick="next()" >></button>
                 <button class="click2" type="button" onclick="next()"><</button>
                 <img src="specification-banner.jpg">
 
@@ -53,7 +53,7 @@
         </div>
     </article>
     <aside>
-        <div class="container">
+        <div class="container1">
             <div class="shop">
                 <h1>LATEST WATCHES YOU CAN'T RESIST!</h1>
             <div class="watch">
@@ -112,6 +112,12 @@
                 </div>
 
             </div>
+            <div class="countdown">
+                <h1>Super SALE</h1>
+                <div class="countdowns">
+                <h2><span id="day">00 Day</span>-<span id="hour">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span> </h2>
+                </div>
+            </div>
         </div>
     </aside>
 </section>
@@ -148,5 +154,37 @@
     setInterval(next,3000);
     setInterval(back,6000);
     setInterval(backs,9000);
+    function TimerCountdown(){
+        var min=0,sec=0, hou=24, day=10;
+        if(day > 0){
+            var span_day = document.getElementById("day");
+            var span_hour = document.getElementById("hour");
+            var span_min = document.getElementById("minutes");
+            var span_sec = document.getElementById("seconds");
+            var timer = setInterval(function (){
+                var d_txt = day<10?("0"+day):day;
+                var h_txt = hou<10?("0"+hou):hou;
+                var m_txt = min<10?("0"+min):min;
+                var sec_txt = sec<10?"0"+sec:sec;
+                span_day.innerText = d_txt+"Day";
+                span_hour.innerText = h_txt;
+                span_min.innerText = m_txt;
+                span_sec.innerText = sec_txt;
+                sec--;
+                if(sec<0){
+                    sec=59;
+                    min--;
+                }
+                if(min<0){
+                    hou--;
+                    min=59;
+                }if(hou<0){
+                    day--;
+                    hou=24;
+                }
+            },1000);
+        }
+    }
+    setTimeout(TimerCountdown);
 </script>
 </html>
