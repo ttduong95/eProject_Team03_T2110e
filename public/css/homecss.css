@@ -43,12 +43,12 @@ header{
 
 }
 header img{
-    width: 150px;
-    height: 60px;
+    width: 200px;
+    height: 80px;
 }
 .logo{
     margin: 0 auto;
-    height: 80px;
+    height: 100px;
     width: 1400px;
     padding: 10px;
 }
@@ -62,7 +62,7 @@ header img{
     float: left;
     padding-left: 50px;
     list-style: none;
-    padding-top: 15px ;
+    padding-top: 25px ;
 }
 .logo2 input{ /* tim kiem*/
     width: 300px;
@@ -81,7 +81,7 @@ header img{
 .logo3 li{
     float: left;
     padding-left: 20px ;
-    padding-top: 15px ;
+    padding-top: 25px ;
     list-style: none;
 }
 .logo3 li a{
@@ -226,7 +226,7 @@ section{
     width: 100%;
     margin: 0 auto;
     float: left;
-    background-color: rgba(255, 255, 255, 0.99);
+    background-color: rgba(255, 255, 255, 0.93);
 }
 .shop{
     width: 1400px;
@@ -234,7 +234,6 @@ section{
     padding-left: 100px;
     text-align: center;
     padding-top: 50px;
-    background-color: rgb(255, 255, 255);
     margin: 0 auto;
 }
 
@@ -243,8 +242,8 @@ section{
     height: 400px;
     float: left;
     text-align: center;
-    background-color: #ffffff;
-    margin: 60px;
+    background-color: rgb(255, 255, 255);
+    margin: 50px;
     font-family: 'Smooch Sans', sans-serif;
 }
 .anh img{
