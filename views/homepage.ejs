@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/css/homecss.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Caveat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Courgette&family=Shizuru&display=swap" rel="stylesheet">
@@ -118,10 +121,25 @@
             </div>
             <div class="countdown">
                 <div class="tieude">
-                <h1><span class="gold">SUPPER </span><span >SALE</span></h1>
+                <h1><span class="gold">SUPER </span><span >SALE</span></h1>
                 </div>
                 <div class="countdowns">
                 <h2><span id="day">00 Day</span>-<span id="hour">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span> </h2>
+                </div>
+                <div class="sale">
+                    <img src="swarovski-crystalline.jpg">
+                    <p> sale off 3%</p>
+                    <button type="button"><a href="#">DETAILS</a></button>
+                </div>
+                <div class="sale">
+                    <img src="swarovski-crystalline.jpg">
+                    <p> sale off 3%</p>
+                    <button type="button"><a href="#">DETAILS</a></button>
+                </div>
+                <div class="sale">
+                    <img src="swarovski-crystalline.jpg">
+                    <p> sale off 3%</p>
+                    <button type="button"><a href="#">DETAILS</a></button>
                 </div>
 
             </div>
@@ -162,8 +180,8 @@
     setInterval(back,6000);
     setInterval(backs,9000);
     function TimerCountdown(){
-        var min=0,sec=0, hou=24, day=10;
-        if(day > 0){
+        var min=0,sec=0, hou=2, day=7;
+        if(hou > 0){
             var span_day = document.getElementById("day");
             var span_hour = document.getElementById("hour");
             var span_min = document.getElementById("minutes");

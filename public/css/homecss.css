@@ -6,28 +6,30 @@
 body{
     background-color: rgb(156, 154, 154);
     font-size: 15px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Smooch Sans', sans-serif;
 
 }
 img{
     max-width: 100%;
+    max-height: 100%;
 }
 a{
     list-style: none;
     text-decoration: none;
-    font-family: Roboto, sans-serif;
+    font-family: 'Smooch Sans', sans-serif;
     font-size: 20px;
     color: white;
 }
 p{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 200;
-    font-family: Roboto, sans-serif;
+    font-family: 'Smooch Sans', sans-serif;
     color: #ffffff;
+    line-height: 40px;
 }
 img{
     max-width: 100%;
-    height: 600px;
+    max-height: 100%;
 }
 .section{
     margin: 0 auto;
@@ -91,6 +93,7 @@ section{
     width: 100%;
 }
 .container{
+    width: 100%;
     margin: 0 auto;
     position: relative;
     font-size: 30px;
@@ -100,6 +103,7 @@ section{
 }
 .container img{
     width: 100%;
+    height: 670px;
 }
 .conten{
     width: 100%;
@@ -110,7 +114,7 @@ section{
     height: 200px;
     position: absolute;
     right: 20%;
-    bottom: 100px;
+    bottom: 150px;
     text-align: center;
     padding: 30px;
     color: white;
@@ -132,24 +136,30 @@ section{
 .conten .click1{
     position: absolute;
     right: 5px;
-    bottom: 300px;
+    bottom: 350px;
     background-color: rgba(255, 255, 255, 0);
 }
 .conten .click2{
     position: absolute;
     left: 5px;
-    bottom: 300px;
+    bottom: 350px;
     background-color: rgba(52, 45, 45, 0.02);
 }
 .conten2 a{
     font-size: 30px;
     line-height: 30px;
-    font-family: 'Courgette', cursive;
+    font-family: 'Smooch Sans', sans-serif;
 }
 .conten3{
     position: relative;
     width: 49.99%;
     float: left;
+    overflow: hidden;
+    height: 500px;
+}
+.conten3 img:hover{
+    transform: scale(1.19);
+    transition: 2000ms;
 }
 .conten3 .conten31{
     position: absolute;
@@ -167,6 +177,12 @@ section{
     position: relative;
     width: 49.99%;
     float: right;
+    overflow: hidden;
+    height: 500px;
+}
+.conten4 img:hover{
+    transform: scale(1.19);
+    transition: 2000ms;
 }
 .conten4 .conten41{
     position: absolute;
@@ -193,9 +209,13 @@ section{
     line-height: 35px;
     padding-top: 30px;
 }
-.tieude{
-    font-size: 45px;
+.conten5 h1{
+    font-size: 60px;
     font-weight: 600;
+}
+.tieude{
+    font-size: 50px;
+    font-weight: 700;
 
 }
 .tieude .gold{
@@ -225,7 +245,7 @@ section{
     text-align: center;
     background-color: #ffffff;
     margin: 60px;
-
+    font-family: 'Smooch Sans', sans-serif;
 }
 .anh img{
     height: 300px;
@@ -247,15 +267,18 @@ section{
 .buy p{
     color: black;
     font-weight: 600;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 30px;
 }
 .buy a{
-    font-size: 15px;
+    font-size: 20px;
     color: black;
+    font-family: 'Smooch Sans', sans-serif;
 }
 .buy p:hover{
     color: #a89c05;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 35px;
 }
 .buy button{
     background-color: white;
@@ -269,12 +292,13 @@ section{
 }
 .countdown{
     width: 100%;
-    height: 600px;
+    height: 700px;
     text-align: center;
-    background-color: black;
+    background-color: rgb(9, 9, 9);
     color: white;
     font-size: 30px;
     padding-top: 50px;
+    float: left;
 
 }
 
@@ -283,8 +307,38 @@ section{
     height: 400px;
     background-color: #b49a04;
     padding: 100px 0 0 0;
-    font-size: 50px;
+    font-size: 60px;
     color: white;
     border-radius: 200px;
+    float: left;
+    margin-top: 50px;
 
+}
+.sale{
+    width: 300px;
+    height: 400px;
+    background-color: rgba(12, 12, 12, 0.91);
+    float: left;
+    overflow: hidden;
+    margin-top: 100px;
+    margin-left: 30px;
+    line-height: 40px;
+    color: black;
+}
+.sale img{
+    width: 300px;
+    height: 300px;
+}
+.sale img:hover{
+    transform: scale(1.09);
+    transition: 500ms;
+}
+.sale button{
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 0, 0, 0);
+}
+.sale a:hover{
+    transform: scale(1.09);
+    transition: 500ms;
+    color: goldenrod;
 }
