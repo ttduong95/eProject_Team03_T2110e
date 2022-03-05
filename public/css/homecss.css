@@ -4,10 +4,10 @@
     padding: 0;
 }
 body{
-    background-color: rgb(156, 154, 154);
+    background-color: rgb(248, 244, 244);
     font-size: 15px;
     font-family: 'Smooch Sans', sans-serif;
-
+    margin: 0 auto;
 }
 img{
     max-width: 100%;
@@ -43,17 +43,17 @@ header{
 
 }
 header img{
-    width: 200px;
-    height: 80px;
+    width: 140px;
+    height: 90px;
 }
 .logo{
     margin: 0 auto;
-    height: 100px;
+    height: 110px;
     width: 1400px;
     padding: 10px;
 }
 .logo a{
-    font-size: 22px;
+    font-size: 30px;
 }
 .logo1{
     float: left;
@@ -62,7 +62,8 @@ header img{
     float: left;
     padding-left: 50px;
     list-style: none;
-    padding-top: 25px ;
+    padding-top: 30px;
+
 }
 .logo2 input{ /* tim kiem*/
     width: 300px;
@@ -81,7 +82,7 @@ header img{
 .logo3 li{
     float: left;
     padding-left: 20px ;
-    padding-top: 25px ;
+    padding-top: 30px ;
     list-style: none;
 }
 .logo3 li a{
@@ -117,7 +118,6 @@ section{
     bottom: 150px;
     text-align: center;
     padding: 30px;
-    color: white;
 
 }
 /* click next anh*/
@@ -128,7 +128,7 @@ section{
     font-size: 30px;
     border: 1px solid rgba(0, 0, 0, 0.02);
 }
-.conten button:hover{
+.container button:hover{
     transform: scale(1.21);
     transition: 500ms;
     color: #b3a408;
@@ -196,26 +196,38 @@ section{
 }
 .conten5{
     width: 100%;
-    height: 600px;
     float: left;
     text-align: center;
-    background-color: #171616;
+    background-color: rgb(12, 12, 12);
     padding-top: 50px;
     margin: 0 auto;
 }
+.conten5 .tieude{
+    color: white;
+}
 .conten51{
-    width: 600px;
+    width: 700px;
     margin: 0 auto;
-    line-height: 35px;
+    line-height: 50px;
     padding-top: 30px;
+    height: 500px;
+
 }
 .conten5 h1{
     font-size: 60px;
     font-weight: 600;
 }
+.conten51 h3{
+    float: right;
+    color: #ffffff;
+    font-size: 39px;
+}
+
 .tieude{
     font-size: 50px;
     font-weight: 700;
+    color: #0f0f0f;
+
 
 }
 .tieude .gold{
@@ -226,8 +238,95 @@ section{
     width: 100%;
     margin: 0 auto;
     float: left;
-    background-color: rgba(255, 255, 255, 0.93);
+    background-color: rgb(248, 246, 246);
+    text-align: center;
 }
+.container1 .ship1{
+    width: 100%;
+    background-color: white;
+    padding-bottom: 50px;
+}
+.ship1 .tieude{
+    padding-bottom: 50px;
+}
+.services{
+    width: 1400px;
+    margin: 0 auto;
+    height: 200px;
+    margin-bottom: 100px;
+}
+.services li{
+    list-style: none;
+}
+.services .pay{
+    color: #b3a408;
+    margin-right: 20px ;
+    list-style: none;
+    font-size: 25px;
+    width: 18%;
+    float: left;
+
+}
+.services .pay:hover{
+    transform: scale(1.14);
+    transition: 500ms;
+}
+.ship h1{
+    font-size: 40px;
+    color: #927e09;
+}
+.ship p{
+    color: #0c0c0c;
+}
+.container1 .ship{
+    width: 1400px;
+    height: 800px;
+    margin: 20px auto;
+    position: relative;
+    background-color: rgb(248, 246, 246);
+}
+.shipping{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 150px;
+    left: 450px;
+}
+.shipping img:hover{
+    transform: scale(1.14);
+    transition: 500ms;
+}
+.number1{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    color: #0f0f0f;
+
+}
+.number2{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+.number3{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+.number4{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
 .shop{
     width: 1400px;
     height: 1200px;
@@ -291,50 +390,72 @@ section{
 }
 .countdown{
     width: 100%;
-    height: 700px;
+    height: 1000px;
     text-align: center;
-    background-color: rgb(9, 9, 9);
-    color: white;
+    background-color: rgb(255, 255, 255);
     font-size: 30px;
     padding-top: 50px;
-    float: left;
-
+    margin: 0 auto;
 }
-
+.countdown .countdown1{
+    width:1100px ;
+    height: 800px;
+    margin: 0 auto;
+    background-color: #9acfea;
+}
 .countdown .countdowns{
     width: 400px;
     height: 400px;
     background-color: #b49a04;
     padding: 100px 0 0 0;
     font-size: 60px;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 200px;
     float: left;
-    margin-top: 50px;
+    margin-top: 100px;
 
 }
 .sale{
-    width: 300px;
-    height: 400px;
-    background-color: rgba(12, 12, 12, 0.91);
+    width: 500px;
+    height: 800px;
+    background-color: rgb(252, 249, 249);
     float: left;
     overflow: hidden;
-    margin-top: 100px;
-    margin-left: 30px;
     line-height: 40px;
-    color: black;
+    margin-left: 150px;
+    position: relative;
+    border: 1px solid rgba(141, 137, 8, 0.72);
+}
+.sale p{
+    color: #0f0f0f;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+}
+.sale a{
+    font-size: 40px;
+    color: #0c0c0c;
+
 }
 .sale img{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
+
+
 }
 .sale img:hover{
     transform: scale(1.09);
     transition: 500ms;
+
 }
-.sale button{
-    background-color: rgba(0, 0, 0, 0);
+.sale .deal{
+    background-color: rgb(193, 171, 171);
     border: 1px solid rgba(255, 0, 0, 0);
+    width: 100px;
+   height: 50px;
+    margin-top: 70px;
+
 }
 .sale a:hover{
     transform: scale(1.09);
