@@ -47,7 +47,7 @@
                 <div class="conten51">
                 <p>The AURA Watches We Sell Are Original And Vendor Certified For A Peerless Performance!</p>
                 <p>uis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, uis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.uis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget</p>
-                    <h3><span>Authorized Representative:</span><br/><span> The Aura</span></h3>
+                    <h3><span>Authorized Representative:</span><br/><span class="red"> The Aura</span></h3>
 
             </div>
             </div>
@@ -188,15 +188,63 @@
                     <p> sale off 3%</p>
                     <button class="clicksale1" type="button" onclick="clicksale1()"><</button>
                     <button class="clicksale2" type="button" onclick="clicksale()">></button>
-                    <button class="deal" type="button"><a href="#">DETAILS</a></button>
+                    <button class="deal" type="button"><a href="#">BUY NOW</a></button>
                 </div>
                 </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="shopnow">
+                <div class="picture">
+                    <img src="back.jpg">
+                    <div class="buynow">
+                        <p>NEED A CLOSER LOOK? COME VISIT US IN STORE</p>
+                        <h1>YOUR SPECIALIST WATCH STORE</h1>
+                        <button  type="button"><a href="#">STORE LOCATOR</a></button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </aside>
 </section>
 <footer class="footer section">
-
+<div class="container3">
+    <div class="container4">
+<div class="mail">
+    <div class="mails">
+    <i class="far fa-envelope"></i>
+        <div class="mails1">
+        <h1>SIGN UP FOR AURA EMAILS</h1>
+    <p>Plus, hear about the latest and greatest from our family of brands!</p>
+        </div>
+    </div>
+    <div class="submit">
+        <form class="form">
+        <input type="email" placeholder="Email Adress..."><button type="submit">SUBSCRIBE</button>
+    </form>
+    </div>
+    </div>
+</div>
+<div class="adress">
+    <div class="street">
+        <div class="tieude">
+            <h1><span class="gold">AURA Store</span></h1>
+            <p><i class="fas fa-street-view"></i> : 179 Johnston St,Fitzroy VIC 3065</p>
+            <p> <i class="far fa-envelope"></i> : sayhello@aurawatch.com</p>
+                <p><i class="fas fa-phone-volume"></i> : (03) 7003 6943</p>
+        </div>
+        <div class="logo3">
+            <ul class="mainlogo1">
+                <li><a href="#"> <i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
 </footer>
 </body>
 <script type="text/javascript">
@@ -246,9 +294,9 @@
 
             " </div>";
     }
-   // setInterval(next,3000);
-    //setInterval(back,6000);
-    //setInterval(backs,9000);
+    setInterval(next,2000);
+    setInterval(back,4000);
+    setInterval(backs,6000);
     function TimerCountdown(){
         var min=0,sec=0, hou=2, day=2;
         if(hou > 0){
@@ -285,18 +333,18 @@
     var clicksale =function () {
         document.getElementById("sale").innerHTML=
             "<img src=\"product11-1.jpg\">" +
-            "<p> sale off 5%</p>" +
+            "<p>sale off 5%</p>" +
             "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale2()\"><</button>" +
             "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale1()\">></button>" +
-            "<button class=\"deal\" type=\"button\"><a href=\"#\">DETAILS</a></button>"
+            "<button class=\"deal\" type=\"button\"><a href=\"#\">BUY NOW</a></button>"
     }
     var clicksale1 =function () {
         document.getElementById("sale").innerHTML=
             "<img src=\"product3-1.jpg\">" +
-            "<p> sale off 8%</p>" +
+            "<p>sale off 8%</p>" +
             "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale()\"><</button>" +
             "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale2()\">></button>" +
-            "<button class=\"deal\" type=\"button\"><a href=\"#\">DETAILS</a></button>"
+            "<button class=\"deal\" type=\"button\"><a href=\"#\">BUY NOW</a></button>"
     }
     var clicksale2 =function () {
         document.getElementById("sale").innerHTML=
@@ -304,7 +352,7 @@
             "<p> sale off 3%</p>" +
             "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale1()\"><</button>" +
             "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale()\">></button>" +
-            "<button class=\"deal\" type=\"button\"><a href=\"#\">DETAILS</a></button>"
+            "<button class=\"deal\" type=\"button\"><a href=\"#\">BUY NOW</a></button>"
     }
 
 

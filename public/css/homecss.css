@@ -34,6 +34,7 @@ img{
 .section{
     margin: 0 auto;
     padding: 0;
+    width: 100%;
 
 }
 /* header*/
@@ -213,7 +214,7 @@ section{
     width: 100%;
     float: left;
     text-align: center;
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(252, 246, 246);
     padding-top: 50px;
     margin: 0 auto;
 }
@@ -221,23 +222,33 @@ section{
     color: white;
 }
 .conten51{
-    width: 700px;
+    width: 800px;
     margin: 0 auto;
     line-height: 50px;
-    padding-top: 30px;
-    height: 500px;
+    height: 450px;
+    border: 1px solid #dbb6b6;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
 
 }
 .conten5 h1{
     font-size: 60px;
     font-weight: 600;
+    color: black;
 }
 .conten51 h3{
     float: right;
-    color: #ffffff;
     font-size: 39px;
+    color: black;
 }
-
+.conten51 p{
+    color: black;
+}
+.conten51 .red{
+    color: red;
+}
 .tieude{
     font-size: 50px;
     font-weight: 700;
@@ -255,11 +266,13 @@ section{
     float: left;
     background-color: rgb(248, 246, 246);
     text-align: center;
+
 }
 .container1 .ship1{
     width: 100%;
     background-color: white;
     padding-bottom: 50px;
+    padding-top: 30px;
 }
 .ship1 .tieude{
     padding-bottom: 50px;
@@ -366,8 +379,8 @@ section{
     max-width: 100%;
 }
 .watch:hover{
-    transform: scale(1.04);
-    transition: 500ms;
+    transform: scale(1.05);
+    transition: 1000ms;
     background-color: rgba(156, 154, 154, 0.35);
     border: 0.5px solid #9c9a9a;
     box-shadow: 3px 3px 5px #aaaaaa ;
@@ -405,7 +418,7 @@ section{
 }
 .countdown{
     width: 100%;
-    height: 1000px;
+    height: 900px;
     text-align: center;
     background-color: rgb(255, 255, 255);
     font-size: 30px;
@@ -429,6 +442,7 @@ section{
     border-radius: 200px;
     float: left;
     margin-top: 100px;
+    margin-left: 150px;
 
 }
 .sale{
@@ -444,10 +458,11 @@ section{
    margin-top: 30px;
 }
 .sale p{
-    color: #0f0f0f;
+    color: #ffffff;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 8px;
+    right: 8px;
+    background-color: #e54148;
 
 }
 .sale a{
@@ -462,14 +477,14 @@ section{
 
 }
 .sale img:hover{
-    transform: scale(1.09);
-    transition: 500ms;
+    transform: scale(1.15);
+    transition: 1000ms;
 
 }
 .sale .deal{
     background-color: rgba(193, 171, 171, 0.01);
     border: 1px solid rgba(255, 0, 0, 0);
-    width: 100px;
+    width: 150px;
    height: 50px;
     margin-top: 35px;
 
@@ -500,5 +515,126 @@ section{
     right: 1px;
     top: 200px;
     border: rgba(246, 244, 241, 0);
+}
+.container2{
+    width: 100%;
+    background-color: #fff8f8;
+
+    float: left;
+}
+.container2 .shopnow{
+    width: 1400px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 30px;
+}
+
+.shopnow .buynow{
+    position: absolute;
+    bottom: 200px;
+    right: 500px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.buynow a{
+    color: black;
+    font-size: 30px;
+}
+.buynow button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    transform: scale(1.09);
+    transition: 1000ms;
+}
+.buynow a:hover{
+   color: #ea1818;
+}
+
+/* footer*/
+.container3{
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: rgb(238, 231, 231);
+    float: left;
+
+}
+.container4{
+    width: 100%;
+    height: 145px;
+    border-bottom: 1px solid white;
+    background-color: white;
+    padding-top: 25px;
+}
+.container3 .mail{
+    width: 1400px;
+    margin: 0 auto;
+}
+.mail .mails{
+    width: 900px;
+    float: left;
+}
+.mails p{
+    color: black;
+    font-size: 25px;
+}
+.mails .far{
+    float: left;
+    width: 100px;
+    height: 80px;
+    font-size: 50px;
+    padding-top: 12px;
+    padding-left: 20px;
+    border-right: 1px solid black;
+    margin-top: 10px;
+}
+.mails .mails1{
+    width: 800px;
+    float: left;
+
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.form{
+    float: right;
+    padding-top: 20px;
+    width: 400px;
+
+}
+.form button{
+    color: #a80505;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+}
+form input{
+    width: 300px;
+    height: 50px;
+    font-size: 17px;
+
+}
+.container3 .adress{
+    width: 1400px;
+    margin: 0 auto;
+}
+.adress .street{
+    width: 350px;
+    float: left;
+}
+.street .tieude p{
+    font-size: 25px;
+    color: black;
+}
+.street .tieude{
+    font-size: 25px;
+}
+.street .logo3 a{
+    color: black;
+}
+.street .logo3{
+    float: left;
+
 }
 
