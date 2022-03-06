@@ -99,12 +99,16 @@ section{
     position: relative;
     font-size: 30px;
     color: white;
-    background-color: black;
+    background-color: rgb(38, 34, 34);
     float: left;
 }
 .container img{
     width: 100%;
     height: 670px;
+}
+.conten img{
+    width: 100%;
+    height: 40%;
 }
 .conten{
     width: 100%;
@@ -114,8 +118,8 @@ section{
     width: 400px;
     height: 200px;
     position: absolute;
-    right: 20%;
-    bottom: 150px;
+    left: 10%;
+    top: 150px;
     text-align: center;
     padding: 30px;
 
@@ -136,23 +140,32 @@ section{
 .conten .click1{
     position: absolute;
     right: 5px;
-    bottom: 350px;
+    top: 330px;
     background-color: rgba(255, 255, 255, 0);
 }
 .conten .click2{
     position: absolute;
     left: 5px;
-    bottom: 350px;
+    top: 330px;
     background-color: rgba(52, 45, 45, 0.02);
 }
-.conten2 a{
-    font-size: 30px;
-    line-height: 30px;
-    font-family: 'Smooch Sans', sans-serif;
+.conten2 .tieude{
+    width: 400px;
+    height: 300px;
+    color: white;
+}
+.conten2 button{
+    width: 100px;
+    height: 40px;
+    background-color: rgba(168, 158, 158, 0.52);
+}
+.conten2 .tieude h1{
+    font-size: 80px;
+    color: white;
 }
 .conten3{
     position: relative;
-    width: 49.99%;
+    width: 50%;
     float: left;
     overflow: hidden;
     height: 500px;
@@ -163,8 +176,9 @@ section{
 }
 .conten3 .conten31{
     position: absolute;
-    right: 50px;
-    bottom: 100px;
+    left: 100px;
+    top: 100px;
+    width: 300px;
 }
 .conten3 a{
     color: #2d2626;
@@ -175,7 +189,7 @@ section{
 }
 .conten4{
     position: relative;
-    width: 49.99%;
+    width: 50%;
     float: right;
     overflow: hidden;
     height: 500px;
@@ -185,9 +199,10 @@ section{
     transition: 2000ms;
 }
 .conten4 .conten41{
+    width: 300px;
     position: absolute;
-    right: 50px;
-    bottom: 100px;
+    left: 100px;
+    top: 100px;
 
 }
 .conten4 a{
@@ -398,15 +413,16 @@ section{
     margin: 0 auto;
 }
 .countdown .countdown1{
-    width:1100px ;
+    width:1400px ;
     height: 800px;
     margin: 0 auto;
-    background-color: #9acfea;
+    background-color: #fcf8f8;
+    padding-top: 30px;
 }
 .countdown .countdowns{
     width: 400px;
     height: 400px;
-    background-color: #b49a04;
+    background-color: #ff535f;
     padding: 100px 0 0 0;
     font-size: 60px;
     color: rgb(255, 255, 255);
@@ -417,14 +433,15 @@ section{
 }
 .sale{
     width: 500px;
-    height: 800px;
-    background-color: rgb(252, 249, 249);
+    height: 650px;
+    background-color: rgba(252, 249, 249, 0);
     float: left;
     overflow: hidden;
     line-height: 40px;
     margin-left: 150px;
     position: relative;
-    border: 1px solid rgba(141, 137, 8, 0.72);
+    border: 1px solid #f8efef;;
+   margin-top: 30px;
 }
 .sale p{
     color: #0f0f0f;
@@ -450,15 +467,38 @@ section{
 
 }
 .sale .deal{
-    background-color: rgb(193, 171, 171);
+    background-color: rgba(193, 171, 171, 0.01);
     border: 1px solid rgba(255, 0, 0, 0);
     width: 100px;
    height: 50px;
-    margin-top: 70px;
+    margin-top: 35px;
 
 }
 .sale a:hover{
     transform: scale(1.09);
     transition: 500ms;
-    color: goldenrod;
+    color: #e71c2c;
 }
+.clicksale1{
+    color: black;
+    font-size: 30px;
+    width: 30px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    left: 1px;
+    top: 200px;
+    border: rgba(246, 244, 241, 0);
+}
+.clicksale2{
+    color: black;
+    font-size: 30px;
+    width: 30px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    right: 1px;
+    top: 200px;
+    border: rgba(246, 244, 241, 0);
+}
+

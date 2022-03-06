@@ -13,10 +13,15 @@
             <div class="conten" id="image">
                 <button class="click1" type="button" onclick="next()" >></button>
                 <button class="click2" type="button" onclick="next()"><</button>
-                <img src="specification-banner.jpg">
+                <img src="slider3.jpg">
 
             <div class="conten2">
-                <a href="#">đồng hồ xịn xò</a>
+                <div class="tieude">
+                <h1><span class="gold">AURA </span><span >WATCH</span></h1>
+                    <h3>The Classics</h3>
+                    <p>Complete your everyday look with a classic leather strap watch</p>
+                    <button type="button"><a href="#">BUY NOW</a></button>
+                </div>
             </div>
             </div>
             <div class="conten3">
@@ -178,9 +183,11 @@
                 <div class="countdowns">
                 <h2><span id="day">00 Day</span>-<span id="hour">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span> </h2>
                 </div>
-                <div class="sale">
+                <div class="sale" id="sale">
                     <img src="product14-1.jpg">
                     <p> sale off 3%</p>
+                    <button class="clicksale1" type="button" onclick="clicksale1()"><</button>
+                    <button class="clicksale2" type="button" onclick="clicksale()">></button>
                     <button class="deal" type="button"><a href="#">DETAILS</a></button>
                 </div>
                 </div>
@@ -197,30 +204,51 @@
  var next=function (){
     document.getElementById("image").innerHTML="<button class=\"click1\" type=\"button\" onclick=\"back()\">></button>" +
         "<button class=\"click2\" type=\"button\" onclick=\"backs()\"><</button> " +
-        "<img src=\"slider2-bg.jpg\">\n"+
+        "<img src=\"slider2.jpg\">\n"+
         "  <div class=\"conten2\">\n"+
-       "  <a href=\"#\">ahihi</a>\n"+
-" </div>";
+
+        "  <div class=\"tieude\">"+
+        "    <h1><span class=\"gold\">AURA </span><span >WATCH</span></h1>"+
+        "    <h3>Best Luxurious</h3>"+
+        "    <p>Aura watches give you classy luxury. Show your worth as a person.</p>"+
+        "       <button type=\"button\"><a href=\"#\">BUY NOW</a></button>"+
+        "    </div>"+
+
+        " </div>";
  }
  var back=function (){
      document.getElementById("image").innerHTML="<button class=\"click1\" type=\"button\" onclick=\"backs()\">></button>" +
          "<button class=\"click2\" type=\"button\" onclick=\"next()\"><</button> " +
-         "<img src=\"slider1-bg.jpg\">\n"+
+         "<img src=\"slider12.jpg\">\n"+
          "  <div class=\"conten2\">\n"+
-         "  <a href=\"#\">hahaha</a>\n"+
+
+         "  <div class=\"tieude\">"+
+         "    <h1><span class=\"gold\">AURA </span><span >WATCH</span></h1>"+
+         "    <h3>New Arivals</h3>"+
+         "    <p>Experience new and modern fashion style</p>"+
+         "       <button type=\"button\"><a href=\"#\">BUY NOW</a></button>"+
+         "    </div>"+
+
          " </div>";
  }
     var backs=function (){
         document.getElementById("image").innerHTML="<button class=\"click1\" type=\"button\" onclick=\"next()\">></button>" +
             "<button class=\"click2\" type=\"button\" onclick=\"back()\"><</button> " +
-            "<img src=\"specification-banner.jpg\">\n"+
+            "<img src=\"slider3.jpg\">\n"+
             "  <div class=\"conten2\">\n"+
-            "  <a href=\"#\">đồng hồ xịn xò</a>\n"+
+
+            "  <div class=\"tieude\">"+
+            "    <h1><span class=\"gold\">AURA </span><span >WATCH</span></h1>"+
+            "    <h3>The Classics</h3>"+
+            "    <p>Complete your everyday look with a classic leather strap watch</p>"+
+            "       <button type=\"button\"><a href=\"#\">BUY NOW</a></button>"+
+            "    </div>"+
+
             " </div>";
     }
-    setInterval(next,3000);
-    setInterval(back,6000);
-    setInterval(backs,9000);
+   // setInterval(next,3000);
+    //setInterval(back,6000);
+    //setInterval(backs,9000);
     function TimerCountdown(){
         var min=0,sec=0, hou=2, day=2;
         if(hou > 0){
@@ -253,5 +281,32 @@
         }
     }
     setTimeout(TimerCountdown);
+
+    var clicksale =function () {
+        document.getElementById("sale").innerHTML=
+            "<img src=\"product11-1.jpg\">" +
+            "<p> sale off 5%</p>" +
+            "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale2()\"><</button>" +
+            "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale1()\">></button>" +
+            "<button class=\"deal\" type=\"button\"><a href=\"#\">DETAILS</a></button>"
+    }
+    var clicksale1 =function () {
+        document.getElementById("sale").innerHTML=
+            "<img src=\"product3-1.jpg\">" +
+            "<p> sale off 8%</p>" +
+            "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale()\"><</button>" +
+            "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale2()\">></button>" +
+            "<button class=\"deal\" type=\"button\"><a href=\"#\">DETAILS</a></button>"
+    }
+    var clicksale2 =function () {
+        document.getElementById("sale").innerHTML=
+            "<img src=\"product14-1.jpg\">" +
+            "<p> sale off 3%</p>" +
+            "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale1()\"><</button>" +
+            "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale()\">></button>" +
+            "<button class=\"deal\" type=\"button\"><a href=\"#\">DETAILS</a></button>"
+    }
+
+
 </script>
 </html>
