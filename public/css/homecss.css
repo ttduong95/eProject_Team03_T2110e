@@ -38,145 +38,7 @@ img{
 
 }
 /* header*/
-header{
-    background-color: rgb(5, 5, 5);
-    border-bottom: 1px solid #504303;
 
-}
-header img{
-    width: 140px;
-    height: 90px;
-}
-.logo{
-    margin: 0 auto;
-    height: 110px;
-    width: 1400px;
-    padding: 10px;
-}
-.logo a{
-    font-size: 30px;
-}
-.logo1{
-    float: left;
-}
-.logo2 li{ /* logo*/
-    float: left;
-    padding-left: 50px;
-    list-style: none;
-    padding-top: 30px;
-
-}
-.logo2 input{ /* tim kiem*/
-    width: 300px;
-    height: 30px;
-    border-radius: 7px;
-}
-.logo2 button{
-    width: 70px;
-    height: 30px;
-}
-.mainlogo .see{
-    position: relative;
-}
-.mainlogo .see img{
-    width: 100%;
-    height: 100%;
-}
-.see .see1{
-    float: left;
-    width: 1400px;
-    display: none;
-    left: -250px;
-    position: absolute;
-    z-index: 10;
-    background-color: #e8e6e6;
-    padding: 10px;
-}
-.see .see1 .pic{
-    width: 32%;
-    margin-right: 15px;
-}
-.see.active .see1{
-    display: block;
-}
-.see1 .model a{
-    color: black;
-}
-.see1 .pic .watch{
-    margin-left: 15px;
-}
-/* bieu tuong fb*/
-.logo .logo3{
-    float: right;
-}
-.logo3 li{
-    float: left;
-    padding-left: 20px ;
-    padding-top: 35px ;
-    list-style: none;
-}
-.logo .logo3 li a{
-font-size: 18px;
-}
-/* sign in*/
-.popup{
-    display: none;
-    background-color: #f2f2f2;
-    box-shadow: 0 0 5px #aaaaaa;
-    width: 500px;
-    position: fixed;
-    top:50%;
-    left: 50%;
-    z-index: 10;
-    margin-top: -170px;
-    margin-left: -225px;
-}
-.popup a{
-    color: red;
-}
-.popup .sign button{
-    width: 48%;
-    margin-top: 30px;
-    padding: 10px;
-    margin-left: 5px;
-}
-.popup .login{
-    width: 70%;
-    margin: 30px auto;
-}
-.popup .login input{
-    width: 90%;
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-.popup .login .checkbox{
-    width: 20px;
-    height: 20px;
-}
-.popup .login button{
-    width: 150px;
-    padding: 10px;
-}
-.bg-fade{
-    display: none;
-    background-color: #000000;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 9;
-    margin: 0;
-    padding: 0;
-    top:0;
-    left:0;
-    opacity: 0.6;
-}
-.closePop{
-    position: absolute;
-    top: 0;
-    right: 5px;
-    font-size: 30px;
-    color: black;
-}
 /* main section*/
 section{
     margin: 0 auto;
@@ -226,7 +88,6 @@ section{
     transform: scale(1.21);
     transition: 500ms;
     color: #b3a408;
-    background-color: white;
 }
 .conten .click1{
     position: absolute;
@@ -314,9 +175,9 @@ section{
 }
 .conten51{
     width: 800px;
+    height: 450px;
     margin: 0 auto;
     line-height: 50px;
-    height: 450px;
     border: 1px solid #dbb6b6;
     margin-bottom: 50px;
     padding: 20px;
@@ -344,7 +205,6 @@ section{
     font-size: 50px;
     font-weight: 700;
     color: #0f0f0f;
-
 
 }
 .tieude .gold{
@@ -388,7 +248,7 @@ section{
 }
 .services .pay:hover{
     transform: scale(1.14);
-    transition: 500ms;
+    transition: 600ms;
 }
 .ship h1{
     font-size: 40px;
@@ -466,7 +326,7 @@ section{
 }
 .anh img{
     height: 300px;
-    overflow: auto;
+    overflow: hidden;
     max-width: 100%;
 }
 .watch:hover{
@@ -493,8 +353,9 @@ section{
     font-family: 'Smooch Sans', sans-serif;
 }
 .buy p:hover{
+    transition: 600ms;
     color: #a89c05;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 35px;
 }
 .buy button{
@@ -502,6 +363,7 @@ section{
     border: 0.5px solid rgba(255, 255, 255, 0);
     width: 90px;
     height: 23px;
+    transition: 600ms;
 }
 .buy button:hover{
     font-weight: 600;
@@ -643,89 +505,4 @@ section{
    color: #ea1818;
 }
 
-/* footer*/
-.container3{
-    width: 100%;
-    height: 600px;
-    margin: 0 auto;
-    background-color: rgb(238, 231, 231);
-    float: left;
-
-}
-.container4{
-    width: 100%;
-    height: 145px;
-    border-bottom: 1px solid white;
-    background-color: white;
-    padding-top: 25px;
-}
-.container3 .mail{
-    width: 1400px;
-    margin: 0 auto;
-}
-.mail .mails{
-    width: 900px;
-    float: left;
-}
-.mails p{
-    color: black;
-    font-size: 25px;
-}
-.mails .far{
-    float: left;
-    width: 100px;
-    height: 80px;
-    font-size: 50px;
-    padding-top: 12px;
-    padding-left: 20px;
-    border-right: 1px solid black;
-    margin-top: 10px;
-}
-.mails .mails1{
-    width: 800px;
-    float: left;
-
-    padding-top: 20px;
-    padding-left: 30px;
-}
-.form{
-    float: right;
-    padding-top: 20px;
-    width: 400px;
-
-}
-.form button{
-    color: #a80505;
-    width: 100px;
-    height: 50px;
-    font-size: 16px;
-}
-form input{
-    width: 300px;
-    height: 50px;
-    font-size: 17px;
-
-}
-.container3 .adress{
-    width: 1400px;
-    margin: 0 auto;
-}
-.adress .street{
-    width: 350px;
-    float: left;
-}
-.street .tieude p{
-    font-size: 25px;
-    color: black;
-}
-.street .tieude{
-    font-size: 25px;
-}
-.street .logo3 a{
-    color: black;
-    font-size: 30px;
-}
-.street .logo3{
-    float: left;
-}
 
