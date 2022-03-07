@@ -5,11 +5,43 @@
     <div class="logo2">
         <ul class="mainlogo">
             <li><a href="/">Home</a></li>
-            <li><a href="#">Shop</a>
-                <ul>
-                    <li></li>
-                    <li></li>
+            <li class="see" onmouseenter="openmenu(this)" onmouseleave="closemenu(this)"><a href="#">Shop</a>
+                <div class="see1">
+                    <ul>
+                    <li class="pic">
+                        <div class="watch">
+                            <div class="anh">
+                                <img src="product2-1.jpg">
+                            </div>
+                            <div class="buy">
+                                <p>Ten</p>
+                                <button type="button"><a href="#">BUY NOW</a></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div class="watch">
+                            <div class="anh">
+                                <img src="product1-1.jpg">
+                            </div>
+                            <div class="buy">
+                                <p>Ten</p>
+                                <button type="button"><a href="#">BUY NOW</a></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="model">
+                            <ul>
+                                <li><a href="#">Model</a></li>
+                                <li><a href="#">Classic</a></li>
+                                <li><a href="#">Sale</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
                 </ul>
+                </div>
             </li>
             <li>
                 <form action="#" method="get">
@@ -21,9 +53,64 @@
     </div>
     <div class="logo3">
         <ul class="mainlogo1">
-            <li><a href="#"> <i class="fab fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="#">CONTACTS</a></li>
+            <li><a href="#" onclick="popup()">USER</a></li>
         </ul>
     </div>
 </div>
+<div id="bg-fade" onclick="closePop()" class="bg-fade"></div>
+<div id="popup" class="popup">
+    <a class="closePop" href="#" onclick="closePop()">X</a>
+    <div class="sign">
+        <button type="button" onclick="login()">LOGIN</button>
+        <button type="button" onclick="REGISTER()">REGISTER</button>
+    </div>
+    <div class="login" id="login">
+        <form action="#" method="get">
+            <input type="email" placeholder="Email*" required>
+            <input type="password" placeholder="PassWord*" required>
+            <a href="#">Forgot password?</a>
+            <label><input class="checkbox" type="checkbox" required> Remember me</label>
+            <button type="submit">LOGIN</button>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function popup(){
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("bg-fade").style.display = "block";
+    }
+    function closePop(){
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("bg-fade").style.display = "none";
+    }
+    function REGISTER(){
+        document.getElementById("login").innerHTML=
+            "<form action=\"#\" method=\"get\">"+
+        "<input type=\"email\" placeholder=\"Email*\" required>" +
+        "<input type=\"text\" placeholder=\"User Name*\" required>"+
+        "<input type=\"password\" placeholder=\"PassWord*\" required>" +
+        "<input type=\"password\" placeholder=\"ResPassWord*\" required>" +
+        "<label><input class=\"checkbox\" type='checkbox' required> I agree the my submitted data is being collected and stored. For further detail on handling user data, see out Privacy Policy.</label>" +
+            "<button type='submit'>Sign Up</button" +
+            "</form>"
+            ;
+    }
+    function login() {
+        document.getElementById("login").innerHTML=
+            "<form action=\"#\" method=\"get\">"+
+            "<input type=\"email\" placeholder=\"Email*\" required>" +
+            "<input type=\"password\" placeholder=\"PassWord*\" required>" +
+            "<a href=\"#\">Forgot password?</a>" +
+            "<label><input class=\"checkbox\" type=\"checkbox\" required> Remember me</label>" +
+            "<button type='submit'>LOGIN</button>" +
+            "</form>"
+    }
+    function openmenu(e){
+        e.classList.add("active")
+    }
+    function closemenu(e){
+        e.classList.remove("active");
+    }
+</script>

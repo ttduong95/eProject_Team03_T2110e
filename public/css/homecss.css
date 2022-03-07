@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-color: rgb(248, 244, 244);
+    background-color: rgb(255, 255, 255);
     font-size: 15px;
     font-family: 'Smooch Sans', sans-serif;
     margin: 0 auto;
@@ -75,19 +75,107 @@ header img{
     width: 70px;
     height: 30px;
 }
+.mainlogo .see{
+    position: relative;
+}
+.mainlogo .see img{
+    width: 100%;
+    height: 100%;
+}
+.see .see1{
+    float: left;
+    width: 1400px;
+    display: none;
+    left: -250px;
+    position: absolute;
+    z-index: 10;
+    background-color: #e8e6e6;
+    padding: 10px;
+}
+.see .see1 .pic{
+    width: 32%;
+    margin-right: 15px;
+}
+.see.active .see1{
+    display: block;
+}
+.see1 .model a{
+    color: black;
+}
+.see1 .pic .watch{
+    margin-left: 15px;
+}
 /* bieu tuong fb*/
-.logo3{
+.logo .logo3{
     float: right;
-
 }
 .logo3 li{
     float: left;
     padding-left: 20px ;
-    padding-top: 30px ;
+    padding-top: 35px ;
     list-style: none;
 }
-.logo3 li a{
-font-size: 25px;
+.logo .logo3 li a{
+font-size: 18px;
+}
+/* sign in*/
+.popup{
+    display: none;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 5px #aaaaaa;
+    width: 500px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    z-index: 10;
+    margin-top: -170px;
+    margin-left: -225px;
+}
+.popup a{
+    color: red;
+}
+.popup .sign button{
+    width: 48%;
+    margin-top: 30px;
+    padding: 10px;
+    margin-left: 5px;
+}
+.popup .login{
+    width: 70%;
+    margin: 30px auto;
+}
+.popup .login input{
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.popup .login .checkbox{
+    width: 20px;
+    height: 20px;
+}
+.popup .login button{
+    width: 150px;
+    padding: 10px;
+}
+.bg-fade{
+    display: none;
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    margin: 0;
+    padding: 0;
+    top:0;
+    left:0;
+    opacity: 0.6;
+}
+.closePop{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 30px;
+    color: black;
 }
 /* main section*/
 section{
@@ -127,16 +215,18 @@ section{
 }
 /* click next anh*/
 .conten button{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 40px;
     color: rgba(255, 255, 255, 0.84);
     font-size: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    background-color: rgb(255, 255, 255);
 }
 .container button:hover{
     transform: scale(1.21);
     transition: 500ms;
     color: #b3a408;
+    background-color: white;
 }
 .conten .click1{
     position: absolute;
@@ -158,7 +248,8 @@ section{
 .conten2 button{
     width: 100px;
     height: 40px;
-    background-color: rgba(168, 158, 158, 0.52);
+    background-color: rgba(168, 158, 158, 0.33);
+    padding-bottom: 5px;
 }
 .conten2 .tieude h1{
     font-size: 80px;
@@ -214,7 +305,7 @@ section{
     width: 100%;
     float: left;
     text-align: center;
-    background-color: rgb(252, 246, 246);
+    background-color: rgb(241, 239, 239);
     padding-top: 50px;
     margin: 0 auto;
 }
@@ -264,7 +355,7 @@ section{
     width: 100%;
     margin: 0 auto;
     float: left;
-    background-color: rgb(248, 246, 246);
+    background-color: rgb(241, 239, 239);
     text-align: center;
 
 }
@@ -311,7 +402,7 @@ section{
     height: 800px;
     margin: 20px auto;
     position: relative;
-    background-color: rgb(248, 246, 246);
+    background-color: rgb(241, 239, 239);
 }
 .shipping{
     width: 500px;
@@ -354,7 +445,7 @@ section{
     right: 50px;
     bottom: 50px;
 }
-
+/* product*/
 .shop{
     width: 1400px;
     height: 1200px;
@@ -429,7 +520,7 @@ section{
     width:1400px ;
     height: 800px;
     margin: 0 auto;
-    background-color: #fcf8f8;
+    background-color: rgb(241, 239, 239);
     padding-top: 30px;
 }
 .countdown .countdowns{
@@ -518,21 +609,21 @@ section{
 }
 .container2{
     width: 100%;
-    background-color: #fff8f8;
-
     float: left;
+    border-bottom: 1px solid #dbcaca;
 }
 .container2 .shopnow{
     width: 1400px;
-    height: 700px;
+    height: 650px;
     margin: 0 auto;
     position: relative;
-    padding-top: 30px;
+    padding-top: 40px;
+
 }
 
 .shopnow .buynow{
     position: absolute;
-    bottom: 200px;
+    bottom: 160px;
     right: 500px;
     color: white;
     font-size: 40px;
@@ -632,9 +723,9 @@ form input{
 }
 .street .logo3 a{
     color: black;
+    font-size: 30px;
 }
 .street .logo3{
     float: left;
-
 }
 
