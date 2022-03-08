@@ -43,8 +43,8 @@ header{
 
 }
 header img{
-    width: 140px;
-    height: 90px;
+    width: 135px;
+    height: 92px;
 }
 .logo{
     margin: 0 auto;
@@ -94,6 +94,7 @@ header img{
 .see .see1 .pic{
     width: 25%;
     margin-right: 15px;
+    text-align: center;
 }
 .see.active .see1{
     display: block;
@@ -114,6 +115,7 @@ header img{
     background-color: #ffffff;
     float: left;
     margin-top: 17px;
+    text-align: center;
 }
 .see1 .model .model1{
     width: 600px;
@@ -123,6 +125,9 @@ header img{
 .see1 .model .model1  a:hover{
     transition: 500ms;
     color: #bbad17;
+}
+.see1 .model .model1 h1{
+    padding-right: 50px;
 }
 /* bieu tuong fb*/
 .logo .logo3{
@@ -147,8 +152,8 @@ header img{
     top:50%;
     left: 50%;
     z-index: 10;
-    margin-top: -170px;
-    margin-left: -225px;
+    margin-top: -240px;
+    margin-left: -250px;
 }
 .popup a{
     color: red;

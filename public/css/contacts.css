@@ -1,0 +1,91 @@
+.container .home-contacts{
+    position: absolute;
+    top: 200px;
+    left: 44%;
+}
+.container5{
+    width: 100%;
+    background-color: rgb(250, 248, 248);
+    padding-bottom: 50px;
+}
+.container5 .colorcontacts{
+    color: white;
+}
+.container5 p{
+    color: #0f0f0f;
+}
+.container5 h1{
+    color: #9a8b0a;
+}
+
+.home-contacts a{
+    font-size: 25px;
+}
+.home-contacts p{
+    font-size: 25px;
+}
+.contacts{
+    width: 100%;
+    height: 500px;
+}
+.container5 .maps{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+.container5 .map{
+    width: 1400px;
+    height: 500px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.container5 .infor{
+    width: 1400px;
+    height: 200px;
+    margin: 50px auto;
+}
+.infor .infor1{
+    width: 22%;
+    height: 150px;
+    float: left;
+    background-color: rgba(215, 212, 212, 0.35);
+    margin-left: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-top: 40px;
+    text-align: center;
+    border: 1px solid black;
+}
+.Drop{
+    width: 1400px;
+    margin: 0 auto;
+    height: 700px;
+    background-color: #c7c7c7;
+    padding-left: 30px;
+    text-align: center;
+}
+.Drop button{
+    width: 200px;
+    height: 50px;
+}
+.Drop .checkbox{
+    width: 20px;
+    height: 20px;
+}
+.Drop-form{
+    width: 600px;
+    padding-top: 30px ;
+    margin: 0 auto;
+}
+.Drop textarea{
+    width: 582px;
+    height: 300px;
+
+}
+.Drop input{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 48%;
+}

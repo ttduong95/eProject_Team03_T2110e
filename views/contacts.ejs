@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("head.ejs") %>
+</head>
+<body>
+<header class="header section">
+    <%- include("header.ejs") %>
+</header>
+<section>
+    <article>
+        <div class="container">
+            <div class="container5">
+            <div class="contacts">
+                <img src="slider2-bg.jpg">
+            </div>
+            <div class="home-contacts">
+                <h1 class="colorcontacts">Contacts</h1>
+                <p class="colorcontacts"><a href="/">Home </a>/<span> Contacts</span></p>
+            </div>
+            <div class="infor">
+                <div class="infor1">
+                    <h1>Address</h1>
+                    <p>179 Johnston St,Fitzron VIC 3065</p>
+                </div>
+                <div class="infor1">
+                    <h1>Phone</h1>
+                    <p>+(03) 7003 6943</p>
+                </div>
+                <div class="infor1">
+                    <h1>Mail</h1>
+                    <p>sayhello@aurawatch.com</p>
+                </div>
+                <div class="infor1">
+                    <h1>Hours</h1>
+                    <p>Mon-Fri: 8am-6pm</p>
+                    <p>Sat: 9am-4pm</p>
+                </div>
+            </div>
+                <div class="Drop">
+                    <div class="Drop-form">
+                    <h1>Drop a Line</h1>
+                    <form>
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="mail" placeholder="Mail" required>
+                        <textarea name="description" placeholder="Massage"></textarea>
+                        <label><input class="checkbox" type="checkbox" required> I have read and agree to the Pricacy Ploicy</label>
+                        <button type="submit">Send Massage</button>
+                    </form>
+                </div>
+                </div>
+            <div class="maps">
+                <h1>Map</h1>
+            <div class="map" id="map"></div>
+            </div>
+            </div>
+        </div>
+    </article>
+</section>
+<footer class="footer section">
+    <%- include("footer.ejs") %>
+</footer>
+</body>
+<script type="text/javascript">
+    var map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 21.0288108, lng: 105.7804978 },
+            zoom: 17,
+        });
+    }
+</script>
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaOulQACiJzBfqumbsqg_-vKha8fCnL-s&callback=initMap&v=weekly"
+        async
+></script>
+</html>
