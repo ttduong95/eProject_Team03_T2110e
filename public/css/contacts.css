@@ -49,20 +49,19 @@
     width: 22%;
     height: 150px;
     float: left;
-    background-color: rgba(215, 212, 212, 0.35);
+    background-color: rgba(212, 205, 205, 0.35);
     margin-left: 32px;
     padding-top: 10px;
     padding-bottom: 10px;
-
+    border-radius: 5px;
     margin-top: 40px;
     text-align: center;
-    border: 1px solid black;
 }
 .Drop{
     width: 1400px;
     margin: 0 auto;
     height: 700px;
-    background-color: #c7c7c7;
+    background-color: #efeaea;
     padding-left: 30px;
     text-align: center;
 }
