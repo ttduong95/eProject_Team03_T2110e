@@ -118,21 +118,22 @@
                 <div class="tieude">
                 <h1><span class="gold">FEATURED </span><span >PRODUCTS</span></h1>
                 </div>
-                    <div class="watch">
-                <div class="anh">
-                <img src="product1-1.jpg">
+                <div id="next">
+                <div class="watch">
+                    <div class="anh">
+                        <img src="product1-1.jpg">
                 </div>
-                <div class="buy">
-                    <p>Ten</p>
+                    <div class="buy">
+                    <p>Ten-1</p>
                     <button type="button"><a href="#">DETAILS</a></button>
                 </div>
-            </div>
+                    </div>
                 <div class="watch">
                     <div class="anh">
                         <img src="product2-1.jpg">
                     </div>
                     <div class="buy">
-                        <p>Ten</p>
+                        <p>Ten-2</p>
                         <button type="button"><a href="#">DETAILS</a></button>
                     </div>
                 </div>
@@ -141,38 +142,15 @@
                         <img src="product3-1.jpg">
                     </div>
                     <div class="buy">
-                        <p>Ten</p>
+                        <p>Ten-3</p>
                         <button type="button"><a href="#">DETAILS</a></button>
                     </div>
                 </div>
-                <div class="watch">
-                    <div class="anh">
-                        <img src="product1-2-768x768.jpg">
-                    </div>
-                    <div class="buy">
-                        <p>Ten</p>
-                        <button type="button"><a href="#">DETAILS</a></button>
-                    </div>
+            </div>
+                <div id="clicknext">
+                <button class="clicknext" type="button" onclick="backproduct()"><<</button>
+                <button class="clicknext" type="button" onclick="nextproduct()">>></button>
                 </div>
-                <div class="watch">
-                    <div class="anh">
-                        <img src="product14-1.jpg">
-                    </div>
-                    <div class="buy">
-                        <p>Ten</p>
-                        <button type="button"><a href="#">DETAILS</a></button>
-                    </div>
-                </div>
-                <div class="watch">
-                    <div class="anh">
-                        <img src="product16-1.jpg">
-                    </div>
-                    <div class="buy">
-                        <p>Ten</p>
-                        <button type="button"><a href="#">DETAILS</a></button>
-                    </div>
-                </div>
-
             </div>
             <div class="countdown">
                 <div class="countdown1">
@@ -212,7 +190,7 @@
 </footer>
 </body>
 <script type="text/javascript">
-    var index=0;
+    // next silder conten//
  var next=function (){
     document.getElementById("image").innerHTML="<button class=\"click1\" type=\"button\" onclick=\"back()\">></button>" +
         "<button class=\"click2\" type=\"button\" onclick=\"backs()\"><</button> " +
@@ -260,9 +238,83 @@
             " </div>";
 
     }
+    // next product//
+    var nextproduct=function (){
+        document.getElementById("clicknext").innerHTML=
+            "<button class=\"clicknext\" type=\"button\" onclick=\"backproduct()\"><<</button>"+
+            "<button class=\"clicknext\" type=\"button\" onclick=\"backproduct()\">>></button>";
+
+        document.getElementById("next").innerHTML=
+        "    <div class=\"watch\">"+
+        "        <div class=\"anh\">"+
+        "            <img src=\"product1-2-768x768.jpg\">"+
+        "        </div>"+
+        "     <div class=\"buy\">"+
+        "         <p>Ten-4</p>"+
+        "         <button type=\"button\"><a href=\"#\">DETAILS</a></button>"+
+        "     </div>"+
+        " </div>"+
+        "<div class=\"watch\">"+
+        "    <div class=\"anh\">"+
+        "        <img src=\"product14-1.jpg\">"+
+        "    </div>"+
+        "   <div class=\"buy\">"+
+        "        <p>Ten-5</p>"+
+        "        <button type=\"button\"><a href=\"#\">DETAILS</a></button>"+
+        "    </div>"+
+        "</div>"+
+        "<div class=\"watch\">"+
+        "    <div class=\"anh\">"+
+        "        <img src=\"product16-1.jpg\">"+
+        "    </div>"+
+        "    <div class=\"buy\">"+
+        "        <p>Ten-6</p>"+
+        "        <button type=\"button\"><a href=\"#\">DETAILS</a></button>"+
+        "    </div>"+
+        "</div>";
+
+    }
+    var backproduct=function (){
+        document.getElementById("clicknext").innerHTML=
+            "<button class=\"clicknext\" type=\"button\" onclick=\"nextproduct()\"><<</button>"+
+            "<button class=\"clicknext\" type=\"button\" onclick=\"nextproduct()\">>></button>";
+
+        document.getElementById("next").innerHTML=
+            "    <div class=\"watch\">"+
+            "        <div class=\"anh\">"+
+            "            <img src=\"product1-1.jpg\">"+
+            "        </div>"+
+            "     <div class=\"buy\">"+
+            "         <p>Ten-1</p>"+
+            "         <button type=\"button\"><a href=\"#\">DETAILS</a></button>"+
+            "     </div>"+
+            " </div>"+
+            "<div class=\"watch\">"+
+            "    <div class=\"anh\">"+
+            "        <img src=\"product2-1.jpg\">"+
+            "    </div>"+
+            "   <div class=\"buy\">"+
+            "        <p>Ten-2</p>"+
+            "        <button type=\"button\"><a href=\"#\">DETAILS</a></button>"+
+            "    </div>"+
+            "</div>"+
+            "<div class=\"watch\">"+
+            "    <div class=\"anh\">"+
+            "        <img src=\"product3-1.jpg\">"+
+            "    </div>"+
+            "    <div class=\"buy\">"+
+            "        <p>Ten-3</p>"+
+            "        <button type=\"button\"><a href=\"#\">DETAILS</a></button>"+
+            "    </div>"+
+            "</div>";
+
+
+    }
    // setInterval(next,2000);
     //setInterval(back,4000);
     //setInterval(backs,6000);
+
+    // SuperSale//
     function TimerCountdown(){
         var min=0,sec=0, hou=2, day=2;
         if(hou > 0){

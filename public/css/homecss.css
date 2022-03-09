@@ -17,7 +17,7 @@ a{
     color: white;
 }
 p{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 200;
     font-family: 'Smooch Sans', sans-serif;
     color: #ffffff;
@@ -218,7 +218,7 @@ section{
     width: 100%;
     margin: 0 auto;
     float: left;
-    background-color: rgb(241, 239, 239);
+    background-color: rgb(255, 255, 255);
     text-align: center;
 
 }
@@ -234,8 +234,10 @@ section{
 .services{
     width: 1400px;
     margin: 0 auto;
-    height: 200px;
-    margin-bottom: 100px;
+    height: 250px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+
 }
 .services li{
     list-style: none;
@@ -244,9 +246,13 @@ section{
     color: #b3a408;
     margin-right: 20px ;
     list-style: none;
-    font-size: 25px;
+    font-size: 18px;
     width: 18%;
+    padding: 15px;
+    height: 110px;
     float: left;
+    text-align: center;
+    border: 1px solid #c1bdbd;
 
 }
 .services .pay:hover{
@@ -255,85 +261,87 @@ section{
 }
 .ship h1{
     font-size: 40px;
-    color: #927e09;
+    color: #362c2c;
 }
 .ship p{
-    color: #0c0c0c;
+    color: #322929;
 }
 .container1 .ship{
     width: 1400px;
-    height: 800px;
-    margin: 20px auto;
+    height: 600px;
+    margin: 0 auto;
     position: relative;
-    background-color: rgb(241, 239, 239);
+    background-color: rgb(250, 246, 246);
 }
 .shipping{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     position: absolute;
-    top: 150px;
-    left: 450px;
+    top: 100px;
+    left: 490px;
 }
 .shipping img:hover{
     transform: scale(1.14);
-    transition: 500ms;
+    transition: 3000ms;
 }
 .number1{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 200px;
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: 20px;
+    top: 20px;
     color: #0f0f0f;
 
 }
 .number2{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 200px;
     position: absolute;
-    left: 50px;
-    bottom: 50px;
+    left: 20px;
+    bottom: 20px;
 }
 .number3{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 200px;
     position: absolute;
-    right: 50px;
-    top: 50px;
+    right: 20px;
+    top: 20px;
 }
 .number4{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 200px;
     position: absolute;
-    right: 50px;
-    bottom: 50px;
+    right: 20px;
+    bottom: 20px;
 }
 /* featured product*/
 .shop{
     width: 1400px;
-    height: 1200px;
-    padding-left: 100px;
+    height: 620px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
     margin: 0 auto;
+    position: relative;
+    border: 1px solid #ffffff;
+    background: #f5eeee;
 }
 
-.watch{
-    width: 300px;
-    height: 400px;
+.shop .watch{
+    width: 350px;
+    height: 420px;
     float: left;
     text-align: center;
     background-color: rgb(255, 255, 255);
-    margin: 50px;
+    margin: 20px 50px 40px 62px;
     font-family: 'Smooch Sans', sans-serif;
-    position: relative;
 }
-.anh img{
-    height: 300px;
+
+.shop .anh img{
+    height: 320px;
     overflow: hidden;
-    max-width: 100%;
+    width: 100%;
 }
-.watch:hover{
+.shop .watch:hover{
     transform: scale(1.05);
     transition: 1000ms;
     background-color: rgba(156, 154, 154, 0.35);
@@ -341,42 +349,52 @@ section{
     box-shadow: 3px 3px 5px #aaaaaa ;
     font-size: 30px;
 }
-.buy{
-    padding-top: 10px;
+.shop .buy{
+    padding-top: 5px;
 
 }
-.buy p{
+.shop .buy p{
     color: black;
     font-weight: 600;
     font-family: 'Smooch Sans', sans-serif;
     font-size: 30px;
 }
-.buy a{
+.shop .buy a{
     font-size: 20px;
     color: black;
     font-family: 'Smooch Sans', sans-serif;
 }
-.buy p:hover{
+.shop .buy p:hover{
     transition: 600ms;
     color: #a89c05;
     font-weight: 800;
     font-size: 35px;
 }
-.buy button{
+.shop .buy button{
     background-color: white;
     border: 0.5px solid rgba(255, 255, 255, 0);
     width: 90px;
-    height: 23px;
+    height: 25px;
     transition: 600ms;
 }
-.buy button:hover{
+.shop .buy button:hover{
     font-weight: 600;
     background-color: #a89c05;
+}
+.shop .clicknext{
+    width: 40px;
+    height: 30px;
+    font-size: 25px;
+    margin-left: 10px;
+}
+.shop .clicknext:hover{
+    background: black;
+    color: white;
 }
 /* Super Sale*/
 .countdown{
     width: 100%;
-    height: 900px;
+    height: 800px;
     text-align: center;
     background-color: rgb(255, 255, 255);
     font-size: 30px;
@@ -385,9 +403,9 @@ section{
 }
 .countdown .countdown1{
     width:1400px ;
-    height: 800px;
+    height: 700px;
     margin: 0 auto;
-    background-color: rgb(241, 239, 239);
+    background-color: rgb(246, 239, 239);
     padding-top: 30px;
 }
 .countdown .countdowns{
@@ -399,21 +417,23 @@ section{
     color: rgb(255, 255, 255);
     border-radius: 200px;
     float: left;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 150px;
 
 }
 .sale{
-    width: 500px;
-    height: 650px;
-    background-color: rgba(252, 249, 249, 0);
+    width: 400px;
+    height: 510px;
+    background-color: rgb(255, 255, 255);
     float: left;
     overflow: hidden;
     line-height: 40px;
     margin-left: 150px;
     position: relative;
     border: 1px solid #f8efef;;
-   margin-top: 30px;
+    margin-top: 30px;
+
+
 }
 .sale p{
     color: #ffffff;
@@ -429,10 +449,7 @@ section{
 
 }
 .sale img{
-    width: 500px;
-    height: 500px;
-
-
+    height: 400px;
 }
 .sale img:hover{
     transform: scale(1.15);
@@ -443,8 +460,10 @@ section{
     background-color: rgba(193, 171, 171, 0.01);
     border: 1px solid rgba(255, 0, 0, 0);
     width: 150px;
-   height: 50px;
-    margin-top: 35px;
+    height: 50px;
+    margin-top: 20px;
+    bottom: 10px;
+    right: 40%;
 
 }
 .sale a:hover{
@@ -508,7 +527,5 @@ section{
     transition: 1000ms;
 }
 .buynow a:hover{
-   color: #ea1818;
+    color: #ea1818;
 }
-
-
