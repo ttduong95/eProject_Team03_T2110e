@@ -42,12 +42,5 @@ app.get("/sp",function (req,res){
             products:rs.recordset
         });
     });
-    var param1 =req.query.Price;
-    var sql_txt1 ="select * from T2110E_Nhom3_Product where Price like '%"+param+"%';";
-    sql.query(sql_txt1,function (err,rs){
-        if(err) res.send("Errors..");
-        else res.render("shop",{
-            price:rs.recordset
-        });
-    })
+
 })
