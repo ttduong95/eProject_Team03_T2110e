@@ -1,0 +1,562 @@
+body{
+    background-color: white;
+    padding:0px;
+    font-size:16px;
+    font-family: 'Roboto', sans-serif;
+}
+.one{
+    float:left;
+    margin-right:40px;
+    margin-bottom:30px;
+    overflow: hidden;
+    padding: 0px;
+    text-align: center;
+    color:black;
+}
+.sort {
+    width: 785px;
+    background-color: #9f7a49; /*#0000000d*/
+    margin-bottom: 25px;
+    height: 50px;
+    line-height: 3;
+}
+.sort span{
+    float:left;
+    padding-right:15px;
+    color:white;
+    padding-left:15px;
+}
+.form-sort{
+    float:left;
+    padding-right:10px;
+}
+.finding{
+    float:left;
+    width:300px;
+    padding-top:7px;
+    margin-right:140px;
+}
+.shop{
+    padding:0px;
+}
+.image{
+    padding:0px;
+}
+.index-sale{
+    width:40px;
+    height:30px;
+    background-color:#9f7a49;
+    color:white;
+    text-align: center;
+    font-size:14px;
+    font-family: 'Saira', sans-serif;
+    line-height:2;
+    z-index: 1;
+    position:absolute;
+    margin:10px;
+}
+.part-1{
+    background-color: #0000000d;
+    text-align: center;
+    font-size:50px;
+    margin-bottom: 60px;
+    height:150px;
+    line-height:3;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: bolder;
+}
+.non-active ul{
+    list-style:none;
+    padding:0px;
+}
+.aside{
+    padding:0px;
+    margin-left:20px;
+}
+.aside label{
+    background-color:#9f7a49;
+    color:white;
+    width:230px;
+    height:50px;
+    font-size:20px;
+    line-height:2.7;
+    padding-left:20px;
+    font-weight: 400;
+    font-family: 'Tajawal', sans-serif;
+}
+.non-active li{
+    padding-left:20px;
+    padding-bottom:10px;
+}
+.non-active li a{
+    color:black;
+    text-decoration: none;
+}
+.information h3{
+    font-size:20px;
+    font-weight: 400;
+    font-family: 'Tajawal', sans-serif;
+}
+.information p{
+    font-family: 'Saira', sans-serif;
+    font-size:17px;
+}
+
+/* Đến phần product.ejs */
+.title h2{
+    font-weight: bolder;
+    font-family: 'Tajawal', sans-serif;
+}
+.title-part{
+    background-color: #0000000d;
+    text-align: center;
+    font-size:50px;
+    margin-bottom: 60px;
+    height:150px;
+    line-height:3;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: bolder;
+ }
+.introduction{
+    width:500px;
+    text-align:justify;
+    margin-top:50px;
+}
+.other{
+    padding-top:20px;
+}
+.other p{
+    padding-top:10px;
+}
+.add-to-cart{
+    width:150px;
+    height:40px;
+    border:1px solid #9f7a49;
+    color:#9f7a49;
+    font-weight: lighter;
+    text-align:center;
+    line-height:2.5;
+    margin-right:20px;
+    font-size:14px;
+}
+.add-to-cart:hover{
+    background-color: #9f7a49;
+    color:white;
+    transition:all 600ms;
+}
+.buy-it-now{
+    width:150px;
+    height:40px;
+    border:1px solid #9f7a49;
+    color:#9f7a49;
+    font-weight: lighter;
+    text-align:center;
+    line-height:2.5;
+    margin-right:20px;
+    font-size:14px;
+}
+.buy-it-now:hover{
+    background-color: #9f7a49;
+    color:white;
+    transition:all 600ms;
+}
+.add-to-wishlist{
+    width:200px;
+    height:40px;
+    border:1px solid #9f7a49;
+    color:#9f7a49;
+    font-weight: lighter;
+    text-align:center;
+    line-height:2.5;
+    font-size:14px;
+}
+.add-to-wishlist:hover{
+    background-color: #9f7a49;
+    color:white;
+    transition:all 600ms;
+}
+.review{
+    margin-top:120px;
+}
+.service{
+    padding:0px;
+    margin-top:40px;
+}
+.des-1 h2{
+    font-size:14px;
+}
+.des-1{
+    width:250px;
+    height:50px;
+    text-align:center;
+    padding:0px;
+    background-color:#9f7a49;
+    color:white
+}
+.para{
+    font-size:16px;
+    width:1020px;
+    height:600px;
+    padding:40px;
+    border: 1px solid #e4e4e4;
+    margin-left:15px;
+    text-align:justify;
+}
+/*phần làm rating*/
+div.stars {
+    width: 270px;
+    display: inline-block;
+    margin-left:-50px;
+}
+input.star { display: none; }
+
+label.star {
+    float: right;
+    padding: 10px;
+    font-size: 24px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #9f7a49;
+    transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+    color: #9f7a49;
+    text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #9f7a49; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
+/*Phần làm Rating*/
+
+.formgroup{
+    border:1px solid #e4e4e4;
+    width:1020px;
+    height:560px;
+    padding:30px;
+}
+.des-2{
+    width:250px;
+    height:50px;
+    text-align:center;
+    padding:0px;
+    background-color:#9f7a49;
+    color:white;
+}
+.des-2 h2{
+    font-size:14px;
+    line-height:3.5;
+}
+.customer-review{
+    margin-top:40px;
+}
+.submit-review{
+    width:200px;
+    height:50px;
+    text-align:center;
+    padding:0px;
+    color:#9f7a49;
+    border:1px solid #9f7a49;
+}
+.submit-review:hover{
+    background-color:#9f7a49;
+    color:white;
+    transition:all 600ms;
+}
+
+/*                              header section                        */
+hheader{
+    background-color: rgb(5, 5, 5);
+    border-bottom: 1px solid #504303;
+
+}
+header img{
+    width: 135px;
+    height: 92px;
+}
+.logo{
+    margin: 0 auto;
+    height: 110px;
+    width: 1400px;
+    padding: 10px;
+}
+.logo a{
+    font-size: 30px;
+}
+.logo1{
+    float: left;
+}
+.logo2 li{ /* logo*/
+    float: left;
+    padding-left: 50px;
+    list-style: none;
+    padding-top: 30px;
+
+}
+.logo2 input{ /* tim kiem*/
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+}
+.logo2 button{
+    width: 70px;
+    height: 30px;
+}
+.mainlogo .see{
+    position: relative;
+}
+.mainlogo .see img{
+    width: 100%;
+    height: 100%;
+}
+.see .see1{
+    float: left;
+    width: 1400px;
+    height: 500px;
+    display: none;
+    left: -250px;
+    position: absolute;
+    z-index: 10;
+    background-color: #e8e6e6;
+
+}
+.see .see1 .pic{
+    width: 25%;
+    text-align: center;
+}
+.see1 .pic h1{
+    padding-bottom: 15px;
+}
+.see.active .see1{
+    display: block;
+}
+.see1 .pic .watch{
+    margin-left: 10px;
+}
+.see1 .model a{
+    color: black;
+    font-size: 22px;
+}
+.see1 .model h1 a{
+    font-size: 30px;
+}
+.see1 .model{
+    width: 600px;
+    height: 400px;
+    background-color: #ffffff;
+    float: left;
+    margin-top: 18px;
+    text-align: center;
+}
+.see1 .model .model1{
+    width: 600px;
+    float: left;
+}
+.see1 .model .model1  a:hover{
+    transition: 500ms;
+    color: #bbad17;
+}
+.see1 .model .model1 h1{
+    padding-right: 50px;
+}
+.see .watch{
+    width: 250px;
+    height: 350px;
+    float: left;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Smooch Sans', sans-serif;
+}
+.see .anh img{
+    height: 250px;
+    overflow: hidden;
+}
+.see .watch:hover{
+    transform: scale(1.05);
+    transition: 1000ms;
+    background-color: rgba(203, 201, 201, 0.35);
+    border: 0.5px solid #9c9a9a;
+    box-shadow: 3px 3px 5px #aaaaaa ;
+    font-size: 30px;
+}
+.see .buy{
+    padding-top: 5px;
+
+}
+.see .buy p{
+    color: black;
+    font-weight: 600;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 30px;
+}
+.see .buy a{
+    font-size: 20px;
+    color: black;
+    font-family: 'Smooch Sans', sans-serif;
+}
+.see .buy p:hover{
+    transition: 600ms;
+    color: #a89c05;
+    font-weight: 800;
+    font-size: 35px;
+}
+.see .buy button{
+    background-color: white;
+    border: 0.5px solid rgba(255, 255, 255, 0);
+    width: 90px;
+    height: 25px;
+    transition: 600ms;
+}
+.see .buy button:hover{
+    font-weight: 600;
+    background-color: #a89c05;
+}
+/* bieu tuong fb*/
+.logo .logo3{
+    float: right;
+}
+.logo3 li{
+    float: left;
+    padding-left: 20px ;
+    padding-top: 35px ;
+    list-style: none;
+}
+.logo .logo3 li a{
+    font-size: 18px;
+}
+/* sign in*/
+.popup{
+    display: none;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 0 5px #aaaaaa;
+    width: 500px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    z-index: 12;
+    margin-top: -240px;
+    margin-left: -250px;
+}
+.popup a{
+    color: red;
+}
+.popup .sign button{
+    width: 48%;
+    margin-top: 30px;
+    padding: 10px;
+    margin-left: 5px;
+}
+.popup .login{
+    width: 70%;
+    margin: 30px auto;
+}
+.popup .login input{
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.popup .login .checkbox{
+    width: 20px;
+    height: 20px;
+}
+.popup .login button{
+    width: 150px;
+    padding: 10px;
+}
+.bg-fade{
+    display: none;
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    margin: 0;
+    padding: 0;
+    top:0;
+    left:0;
+    opacity: 0.6;
+}
+.closePop{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 30px;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                  footer section                  */
+.container3{
+    background-color: #ebebeb;
+}
+.tieude a{
+    color:#9f7a49;
+}
+li.column{
+    list-style:none;
+    text-align:left;
+    color:#9f7a49;
+}
+.column li a{
+    color:black;
+    text-align:left;
+}
+.column li{
+    list-style:none;
+    line-height:2;
+}
+.column ul{
+    padding-left:0px;
+}
+.tieude p{
+    line-height:1.5;
+}
+.mails1 h3{
+    color:#9f7a49;
+}
+.container4{
+    padding-left:18px;
+    margin-bottom:20px;
+}
+.submit form{
+    width:450px;
+}
+.subscribe:hover{
+    background-color:#9f7a49;
+    color:white;
+    transition:all 600ms;
+}
+.subscribe{
+    float:left;
+}
+.license{
+    padding-left:30px;
+}
