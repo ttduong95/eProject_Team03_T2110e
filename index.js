@@ -5,7 +5,6 @@ app.listen(port,function (err) {
     console.log("server is running...");
 })
 app.use(express.static("public"));// cho quyền truy cập toàn bộ các file tĩnh bên trong thư mục public
-app.use(express.static("imge"));
 app.set("view engine","ejs");
 var mssql = require("mssql/msnodesqlv8");
 var config = {
@@ -13,7 +12,7 @@ var config = {
     server: "118.70.125.210",
     user: "sa",
     password: "z@GH7ytQ",
-    database: "QuangHoa",
+    database: "Nhom03",
     driver: "msnodesqlv8",
     stream: false,
     options:{
