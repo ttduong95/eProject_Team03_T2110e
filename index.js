@@ -1,10 +1,10 @@
 var express = require("express");
 var app = express();
-const port = 1402;
+const port = process.env.PORT || 1402;
 app.listen(port,function (err) {
     console.log("server is running...");
 })
-app.use(express.static("public"));// cho quyền truy cập toàn bộ các file tĩnh bên trong thư mục public
+app.use(express.static("public"));
 app.set("view engine","ejs");
 var mssql = require("mssql/msnodesqlv8");
 var config = {
@@ -31,4 +31,23 @@ app.get("/",function (req, res) {
 })
 app.get("/contacts",function (req, res) {
     res.render("contacts");
+})
+
+app.get("/sp",function (req,res){
+    var param =req.query.NameProduct;
+    var sql_txt ="select * from T2110E_Nhom3_Product where NameProduct like '%"+param+"%';";
+    sql.query(sql_txt,function (err,rs){
+        if(err) res.send("Errors..");
+        else res.render("shop",{
+            products:rs.recordset
+        });
+    });
+    var param1 =req.query.Price;
+    var sql_txt1 ="select * from T2110E_Nhom3_Product where Price like '%"+param+"%';";
+    sql.query(sql_txt1,function (err,rs){
+        if(err) res.send("Errors..");
+        else res.render("shop",{
+            price:rs.recordset
+        });
+    })
 })

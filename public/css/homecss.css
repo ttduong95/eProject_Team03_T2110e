@@ -20,7 +20,7 @@ p{
     font-size: 25px;
     font-weight: 200;
     font-family: 'Smooch Sans', sans-serif;
-    color: #ffffff;
+    color: #262222;
     line-height: 40px;
 }
 img{
@@ -48,6 +48,9 @@ section{
     color: white;
     background-color: rgb(255, 255, 255);
     float: left;
+}
+.container p{
+    color: white;
 }
 .container img{
     width: 100%;
@@ -110,7 +113,6 @@ section{
 }
 .conten2 .tieude h1{
     font-size: 80px;
-    color: white;
 }
 .conten3{
     position: relative;
@@ -178,7 +180,7 @@ section{
 }
 .conten51{
     width: 800px;
-    height: 450px;
+    height: 380px;
     margin: 0 auto;
     line-height: 50px;
     border: 1px solid #dbb6b6;
@@ -263,9 +265,6 @@ section{
     font-size: 40px;
     color: #362c2c;
 }
-.ship p{
-    color: #322929;
-}
 .container1 .ship{
     width: 1400px;
     height: 600px;
@@ -290,7 +289,6 @@ section{
     position: absolute;
     left: 20px;
     top: 20px;
-    color: #0f0f0f;
 
 }
 .number2{
@@ -354,10 +352,9 @@ section{
 
 }
 .shop .buy p{
-    color: black;
     font-weight: 600;
     font-family: 'Smooch Sans', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
 }
 .shop .buy a{
     font-size: 20px;
@@ -368,7 +365,6 @@ section{
     transition: 600ms;
     color: #a89c05;
     font-weight: 800;
-    font-size: 35px;
 }
 .shop .buy button{
     background-color: white;
@@ -507,7 +503,9 @@ section{
     padding-top: 40px;
 
 }
-
+.shopnow .buynow p{
+    color: white;
+}
 .shopnow .buynow{
     position: absolute;
     bottom: 160px;
