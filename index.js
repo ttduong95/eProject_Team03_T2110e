@@ -32,6 +32,9 @@ app.get("/",function (req, res) {
 app.get("/contacts",function (req, res) {
     res.render("contacts");
 })
+app.get("/shop-tung",function (req, res) {
+    res.render("shop-tung");
+})
 
 app.get("/sp",function (req,res){
     var param =req.query.NameProduct;
