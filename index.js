@@ -6,24 +6,7 @@ app.listen(port,function (err) {
 })
 app.use(express.static("public"));
 app.set("view engine","ejs");
-var mssql = require("mssql");
-var config = {
-    port: 1433,
-    server: "118.70.125.210",
-    user: "sa",
-    password: "z@GH7ytQ",
-    database: "Nhom03",
-    driver: "msnodesqlv8",
-    stream: false,
-    options:{
 
-    },
-
-}
-mssql.connect(config,function (err){
-    if(err) console.log(err);
-    else console.log("connected database....")
-});
 
 app.get("/",function (req, res) {
     res.render("homepage");
