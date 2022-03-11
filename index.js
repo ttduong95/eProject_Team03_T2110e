@@ -25,7 +25,6 @@ mssql.connect(config,function (err){
     else console.log("connected database....")
 });
 
-var sql = new mssql.Request();
 app.get("/",function (req, res) {
     res.render("homepage");
 })
