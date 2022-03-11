@@ -6,7 +6,7 @@ app.listen(port,function (err) {
 })
 app.use(express.static("public"));
 app.set("view engine","ejs");
-var mssql = require("mssql");
+var mssql = require("mssql/msnodesqlv8");
 var config = {
     port: 1433,
     server: "118.70.125.210",
