@@ -40,22 +40,20 @@
 </section>
 <section class="container product">
     <div class="col-xs-6 big-image">
-        <img src="image/clock.jpeg" width="455" height="554"/>
+
+        <img src="<%= product.Img1 %>" width="455" height="554"/>
     </div>
     <div class="col-xs-6 details">
-        <div class="title"><h2>Golden Analog Numeral</h2></div>
+        <div class="title"><a href="#">Giá tiền: <%= product.NameProduct %></a></div>
         <div class="introduction">
-            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud
-                felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.
-                Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...
-            </p>
+            <p><%= product.Description %></p>
         </div>
         <div class="other">
-            <p>Price: </p>
-            <p>Color: </p>
+            <p>colo: <%= product.Color1 %></p>
+            <p></p>
             <p>Vendor: </p>
-            <p>Type: </p>
-            <p>Quantity: </p>
+            <p>Size1 <%= product.Color1 %></p>
+            <p>Material1</p>
             <p>Creator: </p>
         </div>
         <div class="container service">

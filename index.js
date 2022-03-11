@@ -42,8 +42,19 @@ app.get("/shop",function (req, res) {
     });
 
 })
-app.get("/detail",function (req, res) {
-    res.render("product");
+app.get("/product",function (req, res) {
+    var param = req.query.NameProducts;
+    var sql_txt ="select * from T2110E_Nhom3_Product where NameProduct like '%"+param+"%';";
+    sql.query(sql_txt,function (err, rs) {
+        if(err) res.send("Errors..");
+        else if(rs.recordset.length ==0){
+            res.send("Không tìm thấy sản phẩm nào hết");
+        }else{
+            res.render("product",{
+                product:rs.recordset[0]
+            })
+        }
+    })
 })
 
 app.get("/sp",function (req,res){

@@ -13,7 +13,7 @@
         <%
         // o day viet code js
         for(var i=0;i<products.length;i++){ %>
-            <li><a href="/sp?NameProduct=<%= products[i].NameProduct %>">
+            <li><a href="/=<%= products[i].ID %>">
                     <%= products[i].NameProduct %>
                     -- Giá tiền:
                     <% if(products[i].Price<=100000){ %>
