@@ -118,96 +118,26 @@
             </div>
         </nav>
         <div class="col-xs-12 shop">
-            <a href="#"><div class="one ">
+
+            <%
+            // o day viet code js
+            for(var i=0;i<products.length;i++){ %>
+                <%if(i<=5){ %>
+                <a href="/shop?NameProduct=<%= products[i].NameProduct %>">
+            <div class="one ">
                 <div class="image">
                     <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
+                    <img src="<%= products[i].Img1 %>" height="275" width="235"/>
                 </div>
                 <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
+                    <h3 class="name"><%= products[i].NameProduct %></h3>
+                    <p class="price"><%= products[i].Price %></p>
                 </div>
                 </div></a>
-            <a href="#"><div class="one">
-                <div class="image">
-                    <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
-                </div>
-                </div></a>
-            <a href="#"><div class="one">
-                <div class="image">
-                    <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
-                </div>
-                </div></a>
-            <a href="#"><div class="one">
-                <div class="image">
-                    <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
-                </div>
-                </div></a>
-            <a href="#"><div class="one">
-                <div class="image">
-                    <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
-                </div>
-                </div></a>
-            <a href="#"><div class="one">
-                <div class="image">
-                    <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
-                </div>
-                </div></a>
-            <a href="#"><div class="one">
-                <div class="image">
-                    <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
-                </div>
-                </div></a>
-            <a href="#"><div class="one">
-                <div class="image">
-                    <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
-                </div>
-                </div></a>
-            <a href="#"><div class="one">
-                <div class="image">
-                    <div class="index-sale">Sale</div>
-                    <img src="image/clock.jpeg" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name">Golden Analog Numeral</h3>
-                    <p class="price">$56.78</p>
-                </div>
-                </div></a>
+
+                <%    }  %>
+                <%    }  %>
+
         </div>
     </section>
 </section>
