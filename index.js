@@ -20,8 +20,12 @@ var config = {
     },
 
 }
+mssql.connect(config,function (err){
+    if(err) console.log(err);
+    else console.log("connected database....")
+});
 
-
+var sql = new mssql.Request();
 app.get("/",function (req, res) {
     res.render("homepage");
 })
