@@ -13,7 +13,6 @@ var config = {
     user: "sa",
     password: "z@GH7ytQ",
     database: "Nhom03",
-    driver: "msnodesqlv8",
     stream: false,
     options:{
 
