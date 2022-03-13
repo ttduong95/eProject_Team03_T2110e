@@ -49,6 +49,9 @@ footer .mails .mails1{
     padding: 0;
     text-align: center;
     color:black;
+    width: 250px;
+    height: 450px;
+    border: 1px solid #f3e9e9;
 }
 .sort {
     width: 785px;
@@ -106,9 +109,8 @@ footer .mails .mails1{
     list-style:none;
     padding:0px;
 }
-.aside{
-    padding:0px;
-    margin-left:20px;
+aside{
+    border: 1px solid #ece2e2;
 }
 .aside label{
     background-color:#9f7a49;
@@ -312,7 +314,7 @@ label.star:before {
 }
 
 /*                              header section                        */
-hheader{
+header{
     background-color: rgb(5, 5, 5);
     border-bottom: 1px solid #504303;
 
@@ -596,4 +598,8 @@ li.column{
 }
 .license{
     padding-left:30px;
+}
+#products{
+    width: 1200px;
+    margin: 0 auto;
 }

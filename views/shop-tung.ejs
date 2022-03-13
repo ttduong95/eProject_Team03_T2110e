@@ -38,8 +38,8 @@
 <section class="container part-1 col-xs-12">
     <h1>COLLECTION</h1>
 </section>
-<section class="container part-2 outside">
-    <aside class="col-xs-3">
+<section class="container part-2 outside col-xs-6">
+    <aside class="col-xs-4">
         <div class="aside col-xs-12">
             <label>Category</label>
             <div class="non-active">
@@ -64,10 +64,10 @@
         <div class="non-active">
             <ul>
                 <li>
-                    <a href="#">Black</a>
+                    <a href="/color?color1=black">Black</a>
                 </li>
-                <li><a href="#">White</a></li>
-                <li><a href="#">Blue</a></li>
+                <li><a href="/shop?AllProduct=white">gol</a></li>
+                <li><a href="/color?color1=gol">Gold</a></li>
                 <li><a href="#">Yellow</a></li>
                 <li><a href="#">Grey</a></li>
                 <li><a href="#">Purple</a></li>
@@ -80,7 +80,7 @@
         <label>Shop By Size</label>
         <div class="non-active">
             <ul>
-                <li><a href="#">22cm</a></li>
+                <li><a href="\shop?">22cm</a></li>
                 <li><a href="#">23cm</a></li>
                 <li><a href="#">24cm</a></li>
                 <li><a href="#">25cm</a></li>
@@ -99,11 +99,11 @@
         </div>
     </div>
     </aside>
-    <section class="container inside col-xs-9">
+    <section class="container inside col-xs-8">
         <nav class="container col-xs-12 sort">
             <span>Find</span>
             <div class="finding">
-                <input type="text" name="finding" class="form-control" placeholder="Enter name of watch"/>
+                <input type="text" name="Color" class="form-control" placeholder="Enter name of watch"/>
             </div>
             <span>Sort by</span>
             <div class="form-group form-sort">
@@ -117,16 +117,16 @@
                 </select>
             </div>
         </nav>
-        <div class="col-xs-12 shop">
-
-            <%
-            // o day viet code j
-            for(var i=0;i<products.length;i++){ %>
-                <%if(i<=5){ %>
-                <a href="/product?NameProducts=<%= products[i].NameProduct %>">
+        <div class="col-xs-12 shop" id="products">
+            <div class="col-xs-12 shop" id="products">
+        <div class="nameproduct">
+            <div class="sizeproduct">
+                <h1>All product</h1>
+            <%for(var i=0;i<products.length;i++){ %>
+                <%if(i<=30){ %>
+                <a href="/product?id=<%= products[i].ID %>">
             <div class="one ">
                 <div class="image">
-                    <div class="index-sale">Sale</div>
                     <img src="<%= products[i].Img1 %>" height="275" width="235"/>
                 </div>
                 <div class="information">
@@ -137,7 +137,51 @@
 
                 <%    }  %>
                 <%    }  %>
+        </div>
+            </div>
+            <div class="col-xs-12 shop" id="products">
+            <div class="sizeproduct">
+                <h1>Price</h1>
+                <%for(var i=0;i<size.length;i++){ %>
+                <%if(i<=30){ %>
+                    <a href="/product?id=<%= size[i].ID %>">
+                        <div class="one ">
+                            <div class="image">
+                                <img src="<%= size[i].Img1 %>" height="275" width="235"/>
+                            </div>
+                            <div class="information">
+                                <h3 class="name"><%= size[i].NameProduct %></h3>
+                                <p class="price"><%= size[i].Price %></p>
+                            </div>
+                        </div></a>
 
+                <%    }  %>
+                <%    }  %>
+            </div>
+            </div>
+
+                <div class="col-xs-12 shop" id="products">
+            <div class="sizeproduct">
+                <h1>Color</h1>
+                <%for(var i=0;i<color.length;i++){ %>
+                <%if(i<=30){ %>
+                    <a href="/product?id=<%= color[i].ID %>">
+                        <div class="one ">
+                            <div class="image">
+                                <img src="<%= color[i].Img1 %>" height="275" width="235"/>
+                            </div>
+                            <div class="information">
+                                <h3 class="name"><%= color[i].NameProduct %></h3>
+                                <h3 class="name"><%= color[i].Color1 %>-<%= color[i].Color2 %></h3>
+                                <p class="price"><%= color[i].Price %></p>
+                            </div>
+                        </div></a>
+
+                <%    }  %>
+                <%    }  %>
+            </div>
+
+                </div>
         </div>
     </section>
 </section>
@@ -145,4 +189,7 @@
     <%- include("footer.ejs")%>
 </footer>
 </body>
+<script>
+
+</script>
 </html>

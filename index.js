@@ -32,19 +32,26 @@ app.get("/contacts",function (req, res) {
     res.render("contacts");
 })
 app.get("/shop",function (req, res) {
-    var param =req.query.NameProduct;
-    var sql_txt ="select * from T2110E_Nhom3_Product where NameProduct like '%"+param+"%';";
-    sql.query(sql_txt,function (err,rs){
-        if(err) res.send("Errors..");
-        else res.render("shop-tung",{
-            products:rs.recordset
-        });
-    });
+    var param =req.query.AllProduct;
+    var sql_name ="select * from T2110E_Nhom3_Product where NameProduct like '%"+param+"%';"+
+    "select * from T2110E_Nhom3_Product order by NameProduct desc;"+
+    "select * from T2110E_Nhom3_Product order by Price desc;" +
+    "select * from T2110E_Nhom3_Product where Color1 like '%"+param+"%';";
 
+    sql.query(sql_name,function (err,rs){
+        if(err) res.send("Errors..");
+        else{
+           res.render("shop-tung",{
+           products:rs.recordsets[0],
+               size:rs.recordsets[2],
+               color:rs.recordsets[3],
+           });
+        }
+    });
 })
 app.get("/product",function (req, res) {
-    var param = req.query.NameProducts;
-    var sql_txt ="select * from T2110E_Nhom3_Product where NameProduct like '%"+param+"%';";
+    var param = req.query.id;
+    var sql_txt ="select * from T2110E_Nhom3_Product where ID = "+param+";";
     sql.query(sql_txt,function (err, rs) {
         if(err) res.send("Errors..");
         else if(rs.recordset.length ==0){
@@ -56,7 +63,13 @@ app.get("/product",function (req, res) {
         }
     })
 })
-
-app.get("/sp",function (req,res){
-
+app.get("/color",function (req, res) {
+    var param = req.query.color1;
+    var sql_txt = "select * from T2110E_Nhom3_Product where Color1 like '%"+param+"%';";
+    sql.query(sql_txt,function (err,rs){
+        if(err) res.send("Errors..");
+        else res.render("color",{
+            colors:rs.recordset,
+        });
+    })
 })
