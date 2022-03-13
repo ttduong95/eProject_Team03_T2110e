@@ -35,7 +35,7 @@ app.get("/shop",function (req, res) {
     var param =req.query.AllProduct;
     var sql_name ="select * from T2110E_Nhom3_Product where NameProduct like '%"+param+"%';"+
     "select * from T2110E_Nhom3_Product order by NameProduct desc;"+
-    "select * from T2110E_Nhom3_Product order by Price desc;" +
+    "select * from T2110E_Nhom3_Product where Price like '%"+param+"%';" +
     "select * from T2110E_Nhom3_Product where Color1 like '%"+param+"%';";
 
     sql.query(sql_name,function (err,rs){
