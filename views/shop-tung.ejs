@@ -139,49 +139,12 @@
                 <%    }  %>
         </div>
             </div>
-            <div class="col-xs-12 shop" id="products">
-            <div class="sizeproduct">
-                <h1>Price</h1>
-                <%for(var i=0;i<size.length;i++){ %>
-                <%if(i<=7){ %>
-                    <a href="/product?id=<%= size[i].ID %>">
-                        <div class="one ">
-                            <div class="image">
-                                <img src="<%= size[i].Img1 %>" height="275" width="235"/>
-                            </div>
-                            <div class="information">
-                                <h3 class="name"><%= size[i].NameProduct %></h3>
-                                <p class="price"><%= size[i].Price %></p>
-                            </div>
-                        </div></a>
-
-                <%    }  %>
-                <%    }  %>
-            </div>
-            </div>
 
                 <div class="col-xs-12 shop" id="products">
-            <div class="sizeproduct">
-                <h1>Color</h1>
-                <%for(var i=0;i<color.length;i++){ %>
-                <%if(i<=7){ %>
-                    <a href="/product?id=<%= color[i].ID %>">
-                        <div class="one ">
-                            <div class="image">
-                                <img src="<%= color[i].Img1 %>" height="275" width="235"/>
-                            </div>
-                            <div class="information">
-                                <h3 class="name"><%= color[i].NameProduct %></h3>
-                                <h3 class="name"><%= color[i].Color1 %>-<%= color[i].Color3 %></h3>
-                                <p class="price"><%= color[i].Price %></p>
-                            </div>
-                        </div></a>
 
-                <%    }  %>
-                <%    }  %>
-            </div>
 
                 </div>
+            </div>
         </div>
     </section>
 </section>
