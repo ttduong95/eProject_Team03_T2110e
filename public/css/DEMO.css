@@ -155,7 +155,7 @@ aside{
     line-height:3;
     font-family: 'Tajawal', sans-serif;
     font-weight: bolder;
- }
+}
 .introduction{
     width:500px;
     text-align:justify;
@@ -232,7 +232,7 @@ aside{
     background-color:#9f7a49;
     color:white
 }
-.para{
+.review.descrpition.para{
     font-size:16px;
     width:1020px;
     height:600px;
@@ -531,75 +531,4 @@ header img{
     right: 5px;
     font-size: 30px;
     color: black;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*                  footer section                  */
-.container3{
-    background-color: #ebebeb;
-}
-.tieude a{
-    color:#9f7a49;
-}
-li.column{
-    list-style:none;
-    text-align:left;
-    color:#9f7a49;
-}
-.column li a{
-    color:black;
-    text-align:left;
-}
-.column li{
-    list-style:none;
-    line-height:2;
-}
-.column ul{
-    padding-left:0px;
-}
-.tieude p{
-    line-height:1.5;
-}
-.mails1 h3{
-    color:#9f7a49;
-}
-.container4{
-    padding-left:18px;
-    margin-bottom:20px;
-}
-.submit form{
-    width:450px;
-}
-.subscribe:hover{
-    background-color:#9f7a49;
-    color:white;
-    transition:all 600ms;
-}
-.subscribe{
-    float:left;
-}
-.license{
-    padding-left:30px;
-}
-#products{
-    width: 1200px;
-    margin: 0 auto;
 }
