@@ -80,13 +80,43 @@ app.get("/product",function (req, res) {
         }
     })
 })
-app.get("/color",function (req, res) {
+app.get("/shop-color",function (req, res) {
+    var param = req.query.color;
+    var sql_txt = "select * from T2110E_Nhom3_Product where Color1 like '%"+param+"%';";
+    conn.query(sql_txt,function (err,rs){
+        if(err) console.log(err);
+        else res.render("color",{
+            colors:rs,
+        });
+    })
+})
+app.get("/shop-style",function (req, res) {
     var param = req.query.color1;
     var sql_txt = "select * from T2110E_Nhom3_Product where Color1 like '%"+param+"%';";
     conn.query(sql_txt,function (err,rs){
-        if(err) res.send("Errors..");
-        else res.render("color",{
-            colors:rs.recordset,
+        if(err) console.log(err);
+        else res.render("Style",{
+            style:rs,
+        });
+    })
+})
+app.get("/shop-size",function (req, res) {
+    var param = req.query.size;
+    var sql_txt = "select * from T2110E_Nhom3_Product where Size1 like '%"+param+"%';";
+    conn.query(sql_txt,function (err,rs){
+        if(err) console.log(err);
+        else res.render("Size",{
+            size:rs,
+        });
+    })
+})
+app.get("/shop-material",function (req, res) {
+    var param = req.query.material;
+    var sql_txt = "select * from T2110E_Nhom3_Product where Material1 like '%"+param+"%';";
+    conn.query(sql_txt,function (err,rs){
+        if(err) console.log(err);
+        else res.render("Material",{
+            material:rs,
         });
     })
 })
