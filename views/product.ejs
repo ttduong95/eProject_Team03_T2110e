@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Demo</title>
+    <title>Product</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/giohang.css">
     <link rel="stylesheet" type="text/css" href="/vendors/bootstrap3.4.1/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="/css/DEMO.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +30,7 @@
           rel="stylesheet">
 
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <script src="https://kit.fontawesome.com/ea42f3d974.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -36,30 +40,43 @@
 <section class="container title-part col-xs-12">
     <p>PRODUCT</p>
 </section>
-<section class="container product">
-    <div class="col-xs-6 big-image">
-        <img src="image/clock.jpeg" width="455" height="554"/>
-    </div>
-    <div class="col-xs-6 details">
-        <div class="title"><h2>Golden Analog Numeral</h2></div>
-        <div class="introduction">
-            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud
-                felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.
-                Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras...
-            </p>
+<section class="container product ">
+    <div class="boxsp">
+        <div class="col-xs-6 big-image">
+            <img src="<%= product.Img1 %>" width="455" height="554"/>
         </div>
-        <div class="other">
-            <p>Price: </p>
-            <p>Color: </p>
-            <p>Vendor: </p>
-            <p>Type: </p>
-            <p>Quantity: </p>
-            <p>Creator: </p>
+        <div class="col-xs-6 details">
+            <div class="title"><a href="#"> <%= product.NameProduct %></a>
+            </div>
+            <div class="introduction">
+                <p><%= product.Description %></p>
+            </div>
+            <div class="other">
+                <p>Price: <span><%= product.Price %></span>$</p>
+                <p>Size:
+                    <button class="minus is-form" ><%= product.Size1 %></button>
+                    <button class="minus is-form" ><%= product.Size2 %></button>
+                </p>
+                <p>Color:
+                    <button class="minus is-form" onclick="this" ><%= product.Color1 %></button>
+                    <button class="minus is-form" onclick="this" ><%= product.Color2 %></button>
+                    <button class="minus is-form" onclick="this" ><%= product.Color3 %></button>
+                </p><p>Vendor: Biltwell</p>
+                <p>Material:
+                    <button class="minus is-form" ><%= product.Material1 %></button>
+                    <button class="minus is-form" ><%= product.Material2 %></button>
+                <p>Quantity: <span>
+                        <input class="minus is-form" type="button" onclick="tru<%= product.ID %>(this)" value="-">
+                        <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1" id="textbox<%= product.ID %>">
+                        <input class="plus is-form" onclick="cong<%= product.ID %>(this)" type="button" value="+">
+                    </span>
+                </p>
+            </div>
         </div>
+        <button class="add-to-cart container col-xs-3" onclick="addcart(this)" ><p>ADD TO CART</p></button>
         <div class="container service">
-            <a href="#"><div class="add-to-cart container col-xs-3"><p>ADD TO CART</p></div></a>
             <a href="#"><div class="buy-it-now container col-xs-3"><p>BUY IT NOW</p></div></a>
-            <a href="#"><div class="add-to-wishlist container col-xs-3"><p>ADD TO WISHLIST</p></div></a>
+            <a href="/cart"><div class="add-to-wishlist container col-xs-3"><p>ADD TO WISHLIST</p></div></a>
         </div>
     </div>
 </section>
@@ -70,7 +87,7 @@
                 <h2>PRODUCT DESCRIPTION</h2>
             </div>
         </div>
-        <div class="para-para col-xs-9">
+        <div class="para-para container col-xs-9">
             <strong>Busey ipsum dolor sit amet</strong>
             <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis.
                 Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus
@@ -153,4 +170,77 @@
     <%- include("footer.ejs")%>
 </footer>
 </body>
+
+<script type="text/javascript">
+    function cong<%= product.ID %>(){
+        var t = document.getElementById("textbox<%= product.ID %>").value;
+        document.getElementById("textbox<%= product.ID %>").value = parseInt(t)+1;
+    }
+    function tru<%= product.ID %>(){
+        var t = document.getElementById("textbox<%= product.ID %>").value;
+        if (parseInt(t)>1){
+            document.getElementById("textbox<%= product.ID %>").value = parseInt(t)-1;
+        }
+    }
+
+
+    var giohang<%= product.ID %> = new Array();
+
+    function addcart(x) {
+        var boxsp = x.parentElement.children;
+        var Img = boxsp[0].children[0].src;
+        var Name = boxsp[1].children[0].innerText;
+        var Color = boxsp[1].children[2].children[2].innerText;
+        var Price = boxsp[1].children[2].children[0].children[0].innerText;
+        var Quantity = parseInt(boxsp[1].children[2].children[5].children[0].children[1].value);
+        var sp = new Array(Img, Name, Color, Price, Quantity);
+        //kiemtragiohang
+        var kt = 0;
+        for (let i=0;i<giohang<%= product.ID %>.length;i++){
+            if (giohang<%= product.ID %>[i][1] == Name){
+                kt = 1;
+                Quantity+=parseInt(giohang<%= product.ID %>[i][4]);
+                giohang<%= product.ID %>[i][4] = Quantity;
+                break;
+            }
+        }
+        if (kt == 0){
+            giohang<%= product.ID %>.push(sp);
+        }
+        console.log(giohang<%= product.ID %>);
+        showcountsp();
+        shomycart();
+        //luc gio hang
+        localStorage.setItem("giohang",JSON.stringify(giohang<%= product.ID %>));
+
+    }
+    function showcountsp() {
+        document.getElementById("countsp").innerHTML = giohang<%= product.ID %>.length;
+    }
+    giohang<%= product.ID %> = localStorage.getItem("giohang") ? JSON.parse(localStorage.getItem("giohang")) :[];
+    function shomycart(){
+        var ttgh = "";
+        var total = 0;
+        for (let i=0;i<giohang<%= product.ID %>.length;i++){
+            var tt = parseInt(giohang<%= product.ID %>[i][3]) * parseInt(giohang<%= product.ID %>[i][4]);
+            total+=tt;
+            ttgh+= "<div class=\"hinhanh1\">\n" +
+                "        <img src=\""+giohang<%= product.ID %>[i][0]+"\" width=\"20px\" height=\"20px\" alt=\"\">\n" +
+                "    </div>\n" +
+                "    <div class=\"thongtin1\">\n" +
+                "        <h5>"+giohang<%= product.ID %>[i][1]+"</h5>\n" +
+                "        <p>"+giohang<%= product.ID %>[i][2]+"</p>\n" +
+                "        <h4><span>$</span>"+ tt +"</h4>\n" +
+                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru(this)\" value=\"-\">\n" +
+                "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohang<%= product.ID %>[i][4] +"\" id=\"textbox\">\n" +
+                "        <input class=\"plus is-form\" onclick=\"cong(this)\" type=\"button\" value=\"+\">\n" +
+                "    </div>";
+        }
+        ttgh += "<div class=\"total\">\n" +
+            "        <h4>Total : $"+ total +"</h4>\n" +
+            "    </div>";
+        document.getElementById("showcart").innerHTML = ttgh;
+        showcountsp();
+    }
+</script>
 </html>
