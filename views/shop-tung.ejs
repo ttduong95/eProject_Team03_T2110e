@@ -45,10 +45,10 @@
             <div class="non-active">
                 <ul>
                     <li>
-                        <a href="#">Watch Modern</a>
+                        <a href="/shop-style?style=Modern">Watch Modern</a>
                     </li>
                     <li>
-                        <a href="#">Watch Classic</a>
+                        <a href="/shop-style?style=Classic">Watch Classic</a>
                     </li>
 
                 </ul>
@@ -71,9 +71,10 @@
         <label><a href="/shop-size?size=">Shop By Size</a></label>
         <div class="non-active">
             <ul>
-                <li><a href="/shop-size?size=22">22cm</a></li>
                 <li><a href="/shop-size?size=24">24cm</a></li>
-                <li><a href="/shop-size?size=32">32cm</a></li>
+                <li><a href="/shop-size?size=25">25cm</a></li>
+                <li><a href="/shop-size?size=26">26cm</a></li>
+                <li><a href="/shop-size?size=27">27cm</a></li>
 
             </ul>
         </div>
@@ -82,12 +83,22 @@
         <label>Shop Material</label>
         <div class="non-active">
             <ul>
-                <li><a href="#">Plastic</a></li>
-                <li><a href="#">Steel</a></li>
-                <li><a href="#">Gold</a></li>
+                <li><a href="/shop-material?material=Plastic">Plastic</a></li>
+                <li><a href="/shop-material?material=Steel">Steel</a></li>
+                <li><a href="/shop-material?material=Gold">Gold</a></li>
             </ul>
         </div>
     </div>
+        <div class="aside col-xs-12">
+            <label><a href="/shop-sale?sale=">Shop Sale</a></label>
+            <div class="non-active">
+                <ul>
+                    <li><a href="/shop-sale?sale=-15%">Sale -15%</a></li>
+                    <li><a href="/shop-sale?sale=-10%">Sale -10%</a></li>
+                    <li><a href="/shop-sale?sale=-5%">Sale -05%</a></li>
+                </ul>
+            </div>
+        </div>
     </aside>
     <section class="container inside col-xs-8">
         <nav class="container col-xs-12 sort">
@@ -117,6 +128,7 @@
                 <a href="/product?id=<%= products[i].ID %>">
             <div class="one ">
                 <div class="image">
+                    <div class="index-sale"><%= products[i].Sale %></div>
                     <img src="<%= products[i].Img1 %>" height="275" width="235"/>
                 </div>
                 <div class="information">

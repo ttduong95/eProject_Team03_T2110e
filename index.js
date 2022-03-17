@@ -53,7 +53,7 @@ app.get("/contacts",function (req, res) {
 })
 app.get("/shop",function (req, res) {
     var param = req.query.AllProduct;
-        var sql_name = "select * from T2110E_Nhom3_Product where NameProduct like '%" + param + "%';";
+        var sql_name = "select * from T2110E_Nhom3_Products where NameProduct like '%" + param + "%';";
         conn.query(sql_name, function (err, rs) {
             if (err) console.log(err);
             else {
@@ -67,7 +67,7 @@ app.get("/shop",function (req, res) {
 
 app.get("/product",function (req, res) {
     var param = req.query.id;
-    var sql_txt ="select * from T2110E_Nhom3_Product where ID = "+param+";";
+    var sql_txt ="select * from T2110E_Nhom3_Products where ID = "+param+";";
     conn.query(sql_txt,function (err, rs) {
         if(err) console.log(err);
 
@@ -82,7 +82,7 @@ app.get("/product",function (req, res) {
 })
 app.get("/shop-color",function (req, res) {
     var param = req.query.color;
-    var sql_txt = "select * from T2110E_Nhom3_Product where Color1 like '%"+param+"%';";
+    var sql_txt = "select * from T2110E_Nhom3_Products where Color1 like '%"+param+"%';";
     conn.query(sql_txt,function (err,rs){
         if(err) console.log(err);
         else res.render("color",{
@@ -91,8 +91,8 @@ app.get("/shop-color",function (req, res) {
     })
 })
 app.get("/shop-style",function (req, res) {
-    var param = req.query.color1;
-    var sql_txt = "select * from T2110E_Nhom3_Product where Color1 like '%"+param+"%';";
+    var param = req.query.style;
+    var sql_txt = "select * from T2110E_Nhom3_Products where Style like '%"+param+"%';";
     conn.query(sql_txt,function (err,rs){
         if(err) console.log(err);
         else res.render("Style",{
@@ -102,7 +102,7 @@ app.get("/shop-style",function (req, res) {
 })
 app.get("/shop-size",function (req, res) {
     var param = req.query.size;
-    var sql_txt = "select * from T2110E_Nhom3_Product where Size1 like '%"+param+"%';";
+    var sql_txt = "select * from T2110E_Nhom3_Products where Size1 like '%"+param+"%';";
     conn.query(sql_txt,function (err,rs){
         if(err) console.log(err);
         else res.render("Size",{
@@ -112,11 +112,22 @@ app.get("/shop-size",function (req, res) {
 })
 app.get("/shop-material",function (req, res) {
     var param = req.query.material;
-    var sql_txt = "select * from T2110E_Nhom3_Product where Material1 like '%"+param+"%';";
+    var sql_txt = "select * from T2110E_Nhom3_Products where Material1 like '%"+param+"%';";
     conn.query(sql_txt,function (err,rs){
         if(err) console.log(err);
         else res.render("Material",{
             material:rs,
+        });
+    })
+})
+
+app.get("/shop-sale",function (req, res) {
+    var param = req.query.sale;
+    var sql_txt = "select * from T2110E_Nhom3_Products where Sale like '%"+param+"%';";
+    conn.query(sql_txt,function (err,rs){
+        if(err) console.log(err);
+        else res.render("Sale",{
+            sale:rs,
         });
     })
 })

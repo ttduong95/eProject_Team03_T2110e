@@ -104,7 +104,7 @@
         <nav class="container col-xs-12 sort">
             <span>Find</span>
             <div class="finding">
-                <input type="text" name="finding" class="form-control" placeholder="Enter name of watch"/>
+                <input type="text" name="Color" class="form-control" placeholder="Enter name of watch"/>
             </div>
             <span>Sort by</span>
             <div class="form-group form-sort">
@@ -118,28 +118,34 @@
                 </select>
             </div>
         </nav>
-    </section>
-    <section class="container inside col-xs-8">
         <div class="col-xs-12 shop" id="products">
+            <div class="col-xs-12 shop" id="products">
+                <div class="nameproduct">
+                    <div class="sizeproduct">
+                        <%for(var i=0;i<sale.length;i++){ %>
+                        <%if(i<=30){ %>
+                        <a href="/product?id=<%= sale[i].ID %>">
+                            <div class="one ">
+                                <div class="image">
+                                    <div class="index-sale"><%= sale[i].Sale %></div>
+                                    <img src="<%= sale[i].Img1 %>" height="275" width="235"/>
+                                </div>
+                                <div class="information">
+                                    <h3 class="name"><%= sale[i].NameProduct %></h3>
+                                    <p class="price"><%= sale[i].Price %></p>
+                                </div>
+                            </div></a>
 
-            <%for(var i=0;i<size.length;i++){ %>
-            <%if(i<=30){ %>
-                <a href="/product?id=<%= size[i].ID %>">
-                    <div class="one ">
-                        <div class="image">
-                            <div class="index-sale"><%= size[i].Sale %></div>
-                            <img src="<%= size[i].Img1 %>" height="275" width="235"/>
-                        </div>
-                        <div class="information">
-                            <h3 class="name"><%= size[i].NameProduct %></h3>
-                            <p class="price"><%= size[i].Price %></p>
-                        </div>
-                    </div></a>
+                        <%    }  %>
+                        <%    }  %>
+                    </div>
+                </div>
 
-            <%    }  %>
-            <%    }  %>
+                <div class="col-xs-12 shop" id="products">
 
 
+                </div>
+            </div>
         </div>
     </section>
 </section>
