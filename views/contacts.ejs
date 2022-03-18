@@ -10,8 +10,8 @@
 <section>
     <article>
             <div class="container5">
-            <div class="contacts">
-                <img src="imge/slider2-bg.jpg">
+            <div class="contacts" >
+            <img id="contacts" src="imge/home-repair-2.jpg">
             </div>
             <div class="home-contacts">
                 <h1 class="colorcontacts">Contacts</h1>
@@ -74,4 +74,16 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaOulQACiJzBfqumbsqg_-vKha8fCnL-s&callback=initMap&v=weekly"
         async
 ></script>
+<script>
+    var index=0;
+    var nextcontacts=function (){
+        var imge=["imge/home-repair-2.jpg","imge/slider1-bg.jpg","imge/slider3.jpg"]
+        document.getElementById("contacts").src= imge[index];
+        index++;
+        if(index==3){
+            index=0;
+        }
+    }
+    setInterval(nextcontacts,3000);
+</script>
 </html>

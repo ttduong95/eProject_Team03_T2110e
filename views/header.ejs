@@ -111,8 +111,10 @@
         document.getElementById("bg-fade").style.display = "none";
     }
     function REGISTER(){
-        document.getElementById("color1").style.background="#e54148";
-        document.getElementById("color").style.background="#f2f2f2";
+        document.getElementById("color1").style.background="black";
+        document.getElementById("color1").style.color ="white";
+        document.getElementById("color").style.background="white";
+        document.getElementById("color").style.color="black";
         document.getElementById("login").innerHTML=
             "<form action=\"/acc\" method=\"get\">"+
         "<input type=\"email\" placeholder=\"Email*\" required>" +
@@ -125,8 +127,10 @@
             ;
     }
     function login() {
-        document.getElementById("color").style.background="#e54148";
-        document.getElementById("color1").style.background="#f2f2f2";
+        document.getElementById("color").style.background="black";
+        document.getElementById("color").style.color ="white";
+        document.getElementById("color1").style.background="white";
+        document.getElementById("color1").style.color="black";
         document.getElementById("login").innerHTML=
             "<form action=\"/acc\" method=\"get\">"+
             "<input type=\"email\" placeholder=\"Email*\" required>" +
