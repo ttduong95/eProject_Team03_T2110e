@@ -132,3 +132,12 @@ app.get("/shop-sale",function (req, res) {
         });
     })
 })
+app.get("/cart",function (req, res) {
+    var sql_txt = "select * from T2110E_Nhom3_Product;";
+    conn.query(sql_txt,function (err, rs) {
+        if(err) res.send(err);
+        else res.render("cart",{
+            cart:rs.recordset
+        });
+    })
+})
