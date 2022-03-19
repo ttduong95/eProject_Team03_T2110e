@@ -80,7 +80,22 @@
         <ul class="mainlogo1">
             <li><a href="/contacts">CONTACTS</a></li>
             <li><a href="#" onclick="popup()">USER</a></li>
+            <li class="giohang"><a href="#" onclick="showcart()"><i class="fa fa-shopping-cart" ><span id="countsp">0</span></i></a></li>
         </ul>
+    </div>
+</div>
+<div id="bg-cart" onclick="hidecart()" class="bg-fade"></div>
+
+<div class="show_cart" id="show_cart">
+    <div class="closesp1">
+        <a href="#" onclick="hidecart()">&#10005</a>
+    </div>
+    <div class="showcart" id="showcart">
+
+    </div>
+    <div class="thanhtoan">
+        <a href="/"><button class="proceed_checkout">PROCEED TO CHECKOUT</button></a>
+        <a href="/cart"><button class="view_cart">VIEW CART</button></a>
     </div>
 </div>
 <div id="bg-fade" onclick="closePop()" class="bg-fade"></div>
@@ -146,4 +161,61 @@
     function closemenu(e){
         e.classList.remove("active");
     }
+    function hidecart(){
+        document.getElementById("show_cart").style.display = "none";
+        document.getElementById("bg-cart").style.display = "none";
+    }
+    function showcart(){
+        document.getElementById("show_cart").style.display = "block";
+        document.getElementById("bg-cart").style.display = "block";
+    }
+
+
+    function cong(){
+        var t = document.getElementById("textbox").value;
+        document.getElementById("textbox").value = parseInt(t) + 1;
+    }
+
+
+    function tru(){
+        var t = document.getElementById("textbox").value;
+        if (parseInt(t)>1){
+            document.getElementById("textbox").value = parseInt(t)-1;
+        }
+    }
+    var gh = localStorage.getItem("giohang");
+    var giohang_header = JSON.parse(gh);
+    function shomycart_header(){
+        var ttgh = "";
+        var total = 0;
+        var tt = 0;
+        for (let i=0;i<giohang_header.length;i++){
+            if(giohang_header[i][6] == ""){
+                tt = parseInt(giohang_header[i][5]) * parseInt(giohang_header[i][7]);
+            }else {
+                tt = (parseInt(giohang_header[i][5])-parseInt(giohang_header[i][5])*parseInt(giohang_header[i][6])/100) * parseInt(giohang_header[i][7]);
+            }
+            total+=tt;
+            ttgh+= "<div class=\"hinhanh1\">\n" +
+                "        <img src=\""+giohang_header[i][0]+"\" width=\"20px\" height=\"20px\" alt=\"\">\n" +
+                "    </div>\n" +
+                "    <div class=\"thongtin1\">\n" +
+                "        <h5>"+giohang_header[i][1]+"</h5>\n" +
+                "        <p>"+giohang_header[i][2]+"</p>\n" +
+                "        <h4><span>$</span>"+ tt +"</h4>\n" +
+                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru()\" value=\"-\">\n" +
+                "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohang_header[i][7] +"\" id=\"textbox\">\n" +
+                "        <input class=\"plus is-form\" onclick=\"cong()\" type=\"button\" value=\"+\">\n" +
+                "    </div>";
+        }
+        ttgh += "<div class=\"total\">\n" +
+            "        <h4>Total : $"+ total +"</h4>\n" +
+            "    </div>";
+        document.getElementById("showcart").innerHTML = ttgh;
+    }
+    function showcountsp() {
+        document.getElementById("countsp").innerHTML = giohang_header.length;
+    }
+    shomycart_header();
+    showcountsp();
 </script>

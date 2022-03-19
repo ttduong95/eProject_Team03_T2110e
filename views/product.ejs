@@ -44,6 +44,7 @@
     <div class="boxsp">
         <div class="col-xs-6 big-image">
             <img src="<%= product.Img1 %>" width="455" height="554"/>
+            <span class="id_an"><%= product.ID %></span>
         </div>
         <div class="col-xs-6 details">
             <div class="title"> <h1><%= product.NameProduct %></h1>
@@ -55,17 +56,19 @@
                 <p>Price: <span><%= product.Price %></span>$</p>
                 <p>Sale: <span><%= product.Sale %></span></p>
                 <p>Size:
-                    <button class="minus is-form" ><%= product.Size1 %></button>
-                    <button class="minus is-form" ><%= product.Size2 %></button>
+                    <button class="box is-form" ><%= product.Size1 %></button>
+                    <button class="box is-form" ><%= product.Size2 %></button>
                 </p>
                 <p>Color:
-                    <button class="minus is-form" onclick="this" ><%= product.Color1 %></button>
-                    <button class="minus is-form" onclick="this" ><%= product.Color2 %></button>
-                    <button class="minus is-form" onclick="this" ><%= product.Color3 %></button>
-                </p><p>Vendor: Biltwell</p>
+                    <button class="box is-form" onclick="this" ><%= product.Color1 %></button>
+                    <button class="box is-form" onclick="this" ><%= product.Color2 %></button>
+                    <button class="box is-form" onclick="this" ><%= product.Color3 %></button>
+                </p>
+                <p>Vendor: Biltwell</p>
                 <p>Material:
-                    <button class="minus is-form" ><%= product.Material1 %></button>
-                    <button class="minus is-form" ><%= product.Material2 %></button>
+                    <button class="box is-form" ><%= product.Material1 %></button>
+                    <button class="box is-form" ><%= product.Material2 %></button>
+                </p>
                 <p>Quantity: <span>
                         <input class="minus is-form" type="button" onclick="tru<%= product.ID %>(this)" value="-">
                         <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1" id="textbox<%= product.ID %>">
@@ -185,56 +188,67 @@
     }
 
 
-    var giohang<%= product.ID %> = new Array();
+    var giohang = new Array();
 
     function addcart(x) {
         var boxsp = x.parentElement.children;
         var Img = boxsp[0].children[0].src;
+        var ID = boxsp[0].children[1].innerText;
         var Name = boxsp[1].children[0].innerText;
-        var Color = boxsp[1].children[2].children[2].innerText;
+        var Color = boxsp[1].children[2].children[3].children[0].innerText;
+        var Color1 = boxsp[1].children[2].children[3].children[1].innerText;
+        var Color2 = boxsp[1].children[2].children[3].children[2].innerText;
         var Price = boxsp[1].children[2].children[0].children[0].innerText;
-        var Quantity = parseInt(boxsp[1].children[2].children[5].children[0].children[1].value);
-        var sp = new Array(Img, Name, Color, Price, Quantity);
+        var Sale = boxsp[1].children[2].children[1].children[0].innerText.replace(/[^0-9]/g , '');
+        var Quantity = parseInt(boxsp[1].children[2].children[6].children[0].children[1].value);
+        // alert(boxsp[1].children[2].children[1].children[0].innerText.replace(/[^0-9]/g , '');
+        var sp = new Array(Img, Name, Color,Color1,Color2, Price,Sale, Quantity,ID);
         //kiemtragiohang
         var kt = 0;
-        for (let i=0;i<giohang<%= product.ID %>.length;i++){
-            if (giohang<%= product.ID %>[i][1] == Name){
+        for (let i=0;i<giohang.length;i++){
+            if (giohang[i][1] == Name){
                 kt = 1;
-                Quantity+=parseInt(giohang<%= product.ID %>[i][4]);
-                giohang<%= product.ID %>[i][4] = Quantity;
+                Quantity+=parseInt(giohang[i][7]);
+                giohang[i][7] = Quantity;
                 break;
             }
         }
         if (kt == 0){
-            giohang<%= product.ID %>.push(sp);
+            giohang.push(sp);
         }
-        console.log(giohang<%= product.ID %>);
+        console.log(giohang);
         showcountsp();
         shomycart();
         //luc gio hang
-        localStorage.setItem("giohang",JSON.stringify(giohang<%= product.ID %>));
+        localStorage.setItem("giohang",JSON.stringify(giohang));
 
     }
     function showcountsp() {
-        document.getElementById("countsp").innerHTML = giohang<%= product.ID %>.length;
+        document.getElementById("countsp").innerHTML = giohang.length;
     }
-    giohang<%= product.ID %> = localStorage.getItem("giohang") ? JSON.parse(localStorage.getItem("giohang")) :[];
+
+    giohang = localStorage.getItem("giohang") ? JSON.parse(localStorage.getItem("giohang")) :[];
     function shomycart(){
         var ttgh = "";
         var total = 0;
-        for (let i=0;i<giohang<%= product.ID %>.length;i++){
-            var tt = parseInt(giohang<%= product.ID %>[i][3]) * parseInt(giohang<%= product.ID %>[i][4]);
+        var tt = 0;
+        for (let i=0;i<giohang.length;i++){
+            if(giohang[i][6] == ""){
+                tt = parseInt(giohang[i][5]) * parseInt(giohang[i][7]);
+            }else {
+                tt = (parseInt(giohang[i][5])-parseInt(giohang[i][5])*parseInt(giohang[i][6])/100) * parseInt(giohang[i][7]);
+            }
             total+=tt;
             ttgh+= "<div class=\"hinhanh1\">\n" +
-                "        <img src=\""+giohang<%= product.ID %>[i][0]+"\" width=\"20px\" height=\"20px\" alt=\"\">\n" +
+                "        <img src=\""+giohang[i][0]+"\" width=\"20px\" height=\"20px\" alt=\"\">\n" +
                 "    </div>\n" +
                 "    <div class=\"thongtin1\">\n" +
-                "        <h5>"+giohang<%= product.ID %>[i][1]+"</h5>\n" +
-                "        <p>"+giohang<%= product.ID %>[i][2]+"</p>\n" +
+                "        <h5>"+giohang[i][1]+"</h5>\n" +
+                "        <p>"+giohang[i][2]+"</p>\n" +
                 "        <h4><span>$</span>"+ tt +"</h4>\n" +
-                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru(this)\" value=\"-\">\n" +
-                "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohang<%= product.ID %>[i][4] +"\" id=\"textbox\">\n" +
-                "        <input class=\"plus is-form\" onclick=\"cong(this)\" type=\"button\" value=\"+\">\n" +
+                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru<%= product.ID %>(this)\" value=\"-\">\n" +
+                "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohang[i][7] +"\" id=\"textbox<%= product.ID %>\">\n" +
+                "        <input class=\"plus is-form\" onclick=\"cong<%= product.ID %>(this)\" type=\"button\" value=\"+\">\n" +
                 "    </div>";
         }
         ttgh += "<div class=\"total\">\n" +
