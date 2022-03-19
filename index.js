@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 const port = process.env.PORT || 1402;
 app.listen(port,function (err) {
-    console.log("server is running...");
+    console.log("server is running... http://localhost:1402/");
 })
 app.use(express.static("public"));
 app.set("view engine","ejs");
@@ -135,9 +135,9 @@ app.get("/shop-sale",function (req, res) {
 app.get("/cart",function (req, res) {
     var sql_txt = "select * from T2110E_Nhom3_Product;";
     conn.query(sql_txt,function (err, rs) {
-        if(err) res.send(err);
+        if(err) console.log(err);
         else res.render("cart",{
-            cart:rs.recordset
+            cart:rs,
         });
     })
 })
