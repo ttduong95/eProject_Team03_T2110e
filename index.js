@@ -48,6 +48,9 @@ handleDisconnect();
 app.get("/",function (req, res) {
     res.render("homepage");
 })
+app.get("/service",function (req, res) {
+    res.render("service");
+})
 
 app.get("/contacts",function (req, res) {
     res.render("contacts");

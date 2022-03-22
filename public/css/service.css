@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.section-service{
+    width: 100%;
+    background: #d0cbcb;
+    padding-bottom: 50px;
+}
+.container6{
+    width: 100%;
+    position: relative;
+
+}
+.container6 img{
+    width: 100%;
+
+}
+.container6 .home-service{
+    position: absolute;
+    left: 43%;
+    top: 180px;
+}
+.colorservice a{
+    font-size: 55px;
+    color: #b6aa16;
+}
+.colorservice{
+    font-size: 50px;
+    color: #b6aa16;
+    font-weight: 1500;
+
+}
+.out-service{
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 1400px;
+}
+.out-service h1{
+    font-size: 40px;
+}
+.service-call{
+    width: 1400px;
+    height: 500px;
+    background: #f8f0f0;
+}
+.service-call .callholine{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 50px;
+    margin-top: 100px;
+}
+.service-call .callimg img{
+    width: 50%;
+    float: right;
+    height: 500px;
+}
+.service-receive{
+    width: 1400px;
+    height: 500px;
+    background: #f8f0f0;
+}
+.service-receive .receiveimg img{
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+.service-receive .receive{
+    float: right;
+    width: 50%;
+    padding: 50px;
+    margin-top: 100px;
+    text-align: center;
+}
+.service-fix{
+    width: 1400px;
+    height: 500px;
+    background: #f8f0f0;
+}
+.service-fix .fiximg img{
+    float: right;
+    width: 50%;
+    height: 500px;
+}
+.service-fix .fix{
+    width: 50%;
+    margin-top: 100px;
+    float: left;
+    text-align: center;
+    padding: 50px;
+}
+.service-send{
+    width: 1400px;
+    height: 500px;
+    background: #f8f0f0;
+
+}
+.service-send .send-img img{
+    float: left;
+    width: 50%;
+    height: 500px;
+    background: #16a882;
+}
+.service-send .send{
+    width: 50%;
+    float: right;
+    padding: 50px;
+    margin-top: 100px;
+    text-align: center;
+}

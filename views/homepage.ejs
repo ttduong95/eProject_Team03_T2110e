@@ -163,10 +163,10 @@
                 </div>
                 <div class="sale" id="sale">
                     <img src="imge/product14-1.jpg">
-                    <p> sale off 3%</p>
+                    <p> sale off 15%</p>
                     <button class="clicksale1" type="button" onclick="clicksale1()"><</button>
                     <button class="clicksale2" type="button" onclick="clicksale()">></button>
-                    <button class="deal" type="button"><a href="/shop?AllProduct">BUY NOW</a></button>
+                    <button class="deal" type="button"><a href="/shop-sale?sale">BUY NOW</a></button>
                 </div>
                 </div>
             </div>
@@ -352,26 +352,26 @@
     var clicksale =function () {
         document.getElementById("sale").innerHTML=
             "<img src=\"imge/product11-1.jpg\">" +
-            "<p>sale off 5%</p>" +
+            "<p>sale off 10%</p>" +
             "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale2()\"><</button>" +
             "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale1()\">></button>" +
-            "<button class=\"deal\" type=\"button\"><a href=\"/shop?AllProduct\">BUY NOW</a></button>"
+            "<button class=\"deal\" type=\"button\"><a href=\"/shop-sale?sale\">BUY NOW</a></button>"
     }
     var clicksale1 =function () {
         document.getElementById("sale").innerHTML=
             "<img src=\"imge/product3-1.jpg\">" +
-            "<p>sale off 8%</p>" +
+            "<p>sale off 5%</p>" +
             "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale()\"><</button>" +
             "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale2()\">></button>" +
-            "<button class=\"deal\" type=\"button\"><a href=\"/shop?AllProduct\">BUY NOW</a></button>"
+            "<button class=\"deal\" type=\"button\"><a href=\"/shop-sale?sale\">BUY NOW</a></button>"
     }
     var clicksale2 =function () {
         document.getElementById("sale").innerHTML=
             "<img src=\"imge/product14-1.jpg\">" +
-            "<p> sale off 3%</p>" +
+            "<p> sale off 15%</p>" +
             "<button class=\"clicksale1\" type=\"button\" onclick=\"clicksale1()\"><</button>" +
             "<button class=\"clicksale2\" type=\"button\" onclick=\"clicksale()\">></button>" +
-            "<button class=\"deal\" type=\"button\"><a href=\"/shop?AllProduct\">BUY NOW</a></button>"
+            "<button class=\"deal\" type=\"button\"><a href=\"/shop-sale?sale\">BUY NOW</a></button>"
     }
 
 
