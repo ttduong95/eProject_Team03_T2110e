@@ -96,8 +96,8 @@ header img{
 }
 .see .see1 li a{
     font-size: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #f1e407;
+    padding-bottom: 5px;
+
 }
 .see li a:hover{
     color: #927e09;
