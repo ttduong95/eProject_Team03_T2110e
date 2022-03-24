@@ -42,7 +42,7 @@
 <section class="container part-2 outside col-xs-6">
     <aside class="col-xs-4">
         <div class="aside col-xs-12">
-            <label>Style</label>
+            <label><a href="/shop-style?style">Shop Style</a></label>
             <div class="non-active">
                 <ul>
                     <li>
@@ -56,7 +56,7 @@
             </div>
         </div>
     <div class="aside col-xs-12">
-        <label>Shop By Color</label>
+        <label><a href="/shop-color?color">Shop By Color</a></label>
         <div class="non-active">
             <ul>
                 <li><a href="/shop-color?color=black">Black</a></li>
@@ -69,7 +69,7 @@
         </div>
     </div>
     <div class="aside col-xs-12">
-        <label><a href="/shop-size?size=">Shop By Size</a></label>
+        <label><a href="/shop-size?size">Shop By Size</a></label>
         <div class="non-active">
             <ul>
                 <li><a href="/shop-size?size=24">24cm</a></li>
@@ -81,7 +81,7 @@
         </div>
     </div>
     <div class="aside col-xs-12">
-        <label>Shop Material</label>
+        <label><a href="/shop-material?material">Shop Material</a></label>
         <div class="non-active">
             <ul>
                 <li><a href="/shop-material?material=Plastic">Plastic</a></li>
@@ -91,7 +91,7 @@
         </div>
     </div>
         <div class="aside col-xs-12">
-            <label><a href="/shop-sale?sale=">Shop Sale</a></label>
+            <label><a href="/shop-sale?sale">Shop Sale</a></label>
             <div class="non-active">
                 <ul>
                     <li><a href="/shop-sale?sale=-15%">Sale -15%</a></li>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="information">
                     <h3 class="name"><%= products[i].NameProduct %></h3>
-                    <p class="price"><%= products[i].Price %></p>
+                    <p class="price"><%= products[i].Price %> $</p>
                 </div>
                 </div></a>
 
@@ -143,11 +143,6 @@
         </div>
             </div>
 
-                <div class="col-xs-12 shop" id="products">
-
-
-
-                </div>
             </div>
         </div>
     </section>
