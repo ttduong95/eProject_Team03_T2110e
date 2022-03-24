@@ -33,8 +33,8 @@
     <div class="logo3">
         <ul class="mainlogo1">
             <li><a href="/contacts">CONTACTS</a></li>
-            <li><a href="#" onclick="popup()">USER</a></li>
-            <li class="giohang"><a href="#" onclick="showcart()"><i class="fa fa-shopping-cart" ><span id="countsp">0</span></i></a></li>
+            <li><a onclick="popup()">USER</a></li>
+            <li class="giohang"><a onclick="showcart()"><i class="fa fa-shopping-cart" ><span id="countsp" class="img-circle">0</span></i></a></li>
         </ul>
     </div>
 </div>
@@ -42,19 +42,19 @@
 
 <div class="show_cart" id="show_cart">
     <div class="closesp1">
-        <a href="#" onclick="hidecart()">&#10005</a>
+        <a onclick="hidecart()">&#10005</a>
     </div>
     <div class="showcart" id="showcart">
 
     </div>
     <div class="thanhtoan">
-        <a href="/"><button class="proceed_checkout">PROCEED TO CHECKOUT</button></a>
-        <a href="/cart"><button class="view_cart">VIEW CART</button></a>
+        <a href="/"><button class="add-to-cart_gh col-xs-3">PROCEED TO CHECKOUT</button></a>
+        <a href="/cart"><button class="add-to-cart_gh col-xs-3">VIEW CART</button></a>
     </div>
 </div>
 <div id="bg-fade" onclick="closePop()" class="bg-fade"></div>
 <div id="popup" class="popup">
-    <a class="closePop" href="#" onclick="closePop()">X</a>
+    <a class="closePop" onclick="closePop()">&#10005</a>
     <div class="sign">
         <button id="color" type="button" onclick="login()">LOGIN</button>
         <button id="color1" type="button" onclick="REGISTER()">REGISTER</button>
@@ -172,4 +172,6 @@
     }
     shomycart_header();
     showcountsp();
+
+
 </script>
