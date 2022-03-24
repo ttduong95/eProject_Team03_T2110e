@@ -37,17 +37,17 @@
             <div class="row" id="agree">
                 <form action="#" method="get" class="form_cart">
                     <span>First name</span><br/>
-                    <input type="text" name="firstname" placeholder="First name.." required/><br/>
+                    <input class="input_from" type="text" name="firstname" placeholder="First name.." required/><br/>
                     <span>Last name</span><br/>
-                    <input type="text" name="lastname" placeholder="Last name.." required/><br/>
+                    <input class="input_from" type="text" name="lastname" placeholder="Last name.." required/><br/>
                     <span>Email</span><br/>
-                    <input type="email" name="email" placeholder="Email .."  required/><br/>
+                    <input class="input_from" type="email" name="email" placeholder="Email .."  required/><br/>
                     <span>Address</span><br/>
-                    <input type="text" name="address" placeholder="Address.." required/><br/>
+                    <input class="input_from" type="text" name="address" placeholder="Address.." required/><br/>
                     <span>City</span><br/>
-                    <input type="text" name="city" placeholder="City.." required/><br/>
+                    <input class="input_from" type="text" name="city" placeholder="City.." required/><br/>
                     <span>Phone</span><br/>
-                    <input type="tel" name="telephone" placeholder="Telephone.."  required/><br/>
+                    <input class="input_from" type="tel" name="telephone" placeholder="Telephone.."  required/><br/>
                 </form>
                 <a href="/agree"><button class="add-to-cart_gh col-xs-3" name="Submit" onclick="dongydathang()">AGREE TO ORDER</button></a>
                 </article>
@@ -94,7 +94,7 @@
             }
             total+=tt;
             ttgh+= "<div class=\"img\">\n" +
-                "        <img src=\""+giohangcart[i][0]+"\" width=\"200px\" height=\"205px\" alt=\"\" >\n" +
+                "        <img src=\""+giohangcart[i][0]+"\" width=\"150px\" height=\"155px\" alt=\"\" >\n" +
                 "    </div>\n" +
                 "   <div class=\"closesp\">\n" +
                 "        <a href=\"#\" onclick=\"closesp()\">&#10005</a>\n" +

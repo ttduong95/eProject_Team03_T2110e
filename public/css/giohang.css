@@ -65,39 +65,45 @@
     margin-left: 220px;
 }
 .thongtin{
-    padding: 5px 15px;
-    margin-top: -285px;
-    margin-left: 300px;
-    margin-bottom: 20px;
+    padding: 0 15px;
+    margin-top: -315px;
+    margin-left: 260px;
+    margin-bottom: 25px;
 }
 .thongtin h3{
-    font-size: 22px;
-    font-weight: lighter;
-    margin: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+.thongtin h4{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
 }
 .thongtin p{
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     color: black;
     margin: 5px;
 }
 .img{
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     border: #d0ac65 solid 2px;
     background-color: white;
-    height: 260px;
+    height: 200px;
     padding-top: 20px;
 }
-.thongtin h4{
-    font-size: 18px;
-    margin: 10px 5px;
-    font-weight: 100;
-}
 .thongtin input{
-    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
     margin: 10px -3px;
 }
 .total h4{
-    font-size: 26px;
+    font-size: 22px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 10px;
 }
 .dongy {
     font-size: 20px;
@@ -189,7 +195,7 @@
 .closesp{
     position: relative;
     font-size: 28px;
-    bottom: 280px;
+    bottom: 300px;
     background-color: #e7d8d8;
     width: 30px;
     height: 30px;
@@ -238,13 +244,37 @@
     overflow-y:auto;
 }
 .hinhanh1{
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+    padding-top: 50px;
+    padding-right: 25px;
 }
 .thongtin1{
     font-size: 18px;
-    padding-left: 80px;
-    margin-top: -50px;
+    padding-left: 120px;
+    margin-top: -100px;
+    padding-bottom: 5px;
+}
+.thongtin1 h5{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+.thongtin1 p{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+.thongtin1 h4{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.thongtin1 input{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
 }
 .giohang span{
     font-weight: bold;
@@ -282,10 +312,14 @@ p .btn-default{
 .form_cart span{
     font-size: 18px;
     font-family: "Roboto", sans-serif;
-
 }
-
-
+.input_from{
+    width: 400px;
+    height: 45px;
+}
+.row{
+    padding-left: 25px;
+}
 /*thong tin nhan hang*/
 .agree tr td {
     text-align: left;
@@ -332,13 +366,21 @@ table {
 tr th {
     background-color: #999;
     padding: 10px;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
 }
 td {
     border: 1px #CCC solid;
     text-align: center;
     font-size: 16px;
 }
+.mycart th{
+    background-color: white;
+    border: 1px #CCC solid;
+}
+
+
+
 /*tang giam so luong*/
 .is-form {
     overflow:hidden;
