@@ -31,17 +31,16 @@
 }
 .content_cart{
     float:left;
-    width: 66.67%;
+    width: 60.67%;
     background-color: white;
 }
 
 .sidebar_cart{
     float: left;
-    width: 33.33%;
+    width: 39.33%;
     padding-left: 25px;
     background-color: white;
     margin-top: 85px;
-
 }
 .entry h2{
     font-size: 35px;
@@ -66,34 +65,39 @@
     margin-left: 220px;
 }
 .thongtin{
-    padding: 20px 15px;
+    padding: 5px 15px;
     margin-top: -285px;
     margin-left: 300px;
     margin-bottom: 20px;
 }
-h3{
-    font-size: 30px;
+.thongtin h3{
+    font-size: 22px;
+    font-weight: lighter;
     margin: 5px;
 }
 .thongtin p{
-    font-size: 20px;
+    font-size: 18px;
     color: black;
     margin: 5px;
 }
 .img{
     margin-bottom: 20px;
     border: #d0ac65 solid 2px;
-    background-color: #ece8e8;
+    background-color: white;
     height: 260px;
+    padding-top: 20px;
 }
-h4{
-    font-size: 20px;
+.thongtin h4{
+    font-size: 18px;
     margin: 10px 5px;
     font-weight: 100;
 }
 .thongtin input{
-    font-size: 20px;
+    font-size: 14px;
     margin: 10px -3px;
+}
+.total h4{
+    font-size: 26px;
 }
 .dongy {
     font-size: 20px;
@@ -106,6 +110,7 @@ h4{
     margin-top: 30px;
     margin-bottom: 30px;
     font-family: "Roboto", sans-serif;
+    cursor: pointer;
 }
 .shopping {
     font-size: 20px;
@@ -117,6 +122,7 @@ h4{
     font-weight: bold;
     margin: 20px 220px;
     font-family: "Roboto", sans-serif;
+    cursor: pointer;
 }
 .view_cart {
     font-size: 12px;
@@ -128,6 +134,7 @@ h4{
     font-weight: bold;
     margin: 8px 15px;
     font-family: "Roboto", sans-serif;
+    cursor: pointer;
     /*position: absolute;*/
     /*bottom: 20px;*/
 }
@@ -141,20 +148,43 @@ h4{
     font-weight: bold;
     margin: 8px 15px;
     font-family: "Roboto", sans-serif;
+    cursor: pointer;
     /*position: absolute;*/
     /*bottom: 80px;*/
 }
-.dongy:hover {
-    background-image: linear-gradient(#F30, #000);
+.add-to-cart_gh{
+    width:300px;
+    height: 40px;
+    border:1px solid #9f7a49;
+    color:#9f7a49;
+    font-weight: bold;
+    text-align:center;
+    line-height:2;
+    margin:8px 15px;
+    font-size:14px;
+    cursor: pointer;
 }
-.shopping:hover {
-    background-image: linear-gradient(#F30, #000);
+.add-to-cart_gh:hover{
+    background-color: #9f7a49;
+    color:white;
+    transition:all 600ms;
 }
-.proceed_checkout:hover {
-    background-image: linear-gradient(#F30, #000);
+.add-to-cart_cart{
+    width:200px;
+    height: 40px;
+    border:1px solid #9f7a49;
+    color:#9f7a49;
+    font-weight: bold;
+    text-align:center;
+    line-height:2;
+    margin:8px 220px;
+    font-size:14px;
+    cursor: pointer;
 }
-.view_cart:hover {
-    background-image: linear-gradient(#F30, #000);
+.add-to-cart_cart:hover{
+    background-color: #9f7a49;
+    color:white;
+    transition:all 600ms;
 }
 .closesp{
     position: relative;
@@ -172,6 +202,7 @@ h4{
     background-color: #e7d8d8;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .closesp1 a{
@@ -223,10 +254,91 @@ h4{
     border: white solid 2px;
     border-radius: 45px;
     padding: 4px 5px;
+}
+.fa-shopping-cart{
+    cursor: pointer;
+}
+
+p .btn-default{
+    font-size: 22px;
+}
+.form_cart{
+    width: 100%;
+    margin-left: 16px;
+}
+.form_cart input{
+    margin-bottom: 20px;
+    border: 1px solid #9f7a49;
+    margin-top: 8px;
+}
+.form_cart button{
+    margin-bottom: 20px;
+    margin-left: 0;
+    border: 1px solid #9f7a49;
+    font-size: 18px;
+    font-weight: 300;
+
+}
+.form_cart span{
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
 
 }
 
 
+/*thong tin nhan hang*/
+.agree tr td {
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+.agree input{
+    width: 350px;
+    font-weight: 300;
+    height: 35px;
+    font-size: 18px;
+}
+.container_cart_order{
+
+}
+.content_cart_order{
+    margin: 0 auto;
+    width: 1200px;
+    background-color: white;
+}
+.thongtinnhanhang tr td {
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+td {
+    border: 1px #CCC solid;
+    text-align: center;
+    font-size: 16px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr th {
+    background-color: #999;
+    padding: 10px;
+    font-size: 16px;
+}
+td {
+    border: 1px #CCC solid;
+    text-align: center;
+    font-size: 16px;
+}
 /*tang giam so luong*/
 .is-form {
     overflow:hidden;

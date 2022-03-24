@@ -112,7 +112,7 @@
                 <select class="form-group">
                     <option>Featured</option>
                     <option>Best selling</option>
-                    <option>Alphabetically, A-Z</option>
+                    <option >Alphabetically, A-Z</option>
                     <option>Alphabetically, A-Z</option>
                     <option>Price, low to high</option>
                     <option>Price, high to low</option>
@@ -124,24 +124,24 @@
         <div class="nameproduct">
             <div class="sizeproduct">
                 <h1>All product</h1>
-            <%for(var i=0;i<products.length;i++){ %>
+                <%for(var i=0;i<products.length;i++){ %>
                 <%if(i<=30){ %>
                 <a href="/product?id=<%= products[i].ID %>">
-            <div class="one ">
-                <div class="image">
-                    <div class="index-sale"><%= products[i].Sale %></div>
-                    <img src="<%= products[i].Img1 %>" height="275" width="235"/>
-                </div>
-                <div class="information">
-                    <h3 class="name"><%= products[i].NameProduct %></h3>
-                    <p class="price"><%= products[i].Price %></p>
-                </div>
+                <div class="one ">
+                    <div class="image">
+                        <div class="index-sale"><%= products[i].Sale %></div>
+                        <img src="<%= products[i].Img1 %>" height="255" width="250"/>
+                    </div>
+                    <div class="information">
+                        <h3 class="name"><%= products[i].NameProduct %></h3>
+                        <p class="price">$<%= products[i].Price %></p>
+                    </div>
                 </div></a>
 
                 <%    }  %>
                 <%    }  %>
-        </div>
             </div>
+        </div>
 
                 <div class="col-xs-12 shop" id="products">
 
@@ -156,7 +156,7 @@
     <%- include("footer.ejs")%>
 </footer>
 </body>
-<script>
+<script type="text/javascript">
 
 </script>
 </html>

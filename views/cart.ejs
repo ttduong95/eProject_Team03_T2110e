@@ -27,25 +27,32 @@
 
             </div>
             <div class="thanhtoan">
-                <a href="/shop?AllProduct"><button class="shopping">CONTINUE SHOPPING</button></a>
+                <a href="/shop?AllProduct"><button class="add-to-cart_cart container col-xs-3">CONTINUE SHOPPING</button></a>
             </div>
         </article>
         <aside class="sidebar_cart">
             <div class="block black">
-                <h2>Order Summary</h2>
-                <h4>Subtotal : $250.00</h4>
+                <h2>Delivery information</h2>
             </div>
-            <div class="thanhtoan">
-                <a href="/"><button class="dongy">ADD NOTE TO YOUR ORDER</button></a>
-            </div>
-            <div class="block">
-                <h4>Shipping, taxes, and discounts will be calculated at checkout.</h4>
-            </div>
-            <div class="thanhtoan">
-                <a href="/"><button class="dongy">PROCEED TO CHECKOUT</button></a>
-            </div>
-            <div class="thanhtoan">
-                <a href="/"><button class="dongy">GET SHIPPING ESTIMATES</button></a>
+            <div class="row" id="agree">
+                <form action="#" method="get" class="form_cart">
+                    <span>First name</span><br/>
+                    <input type="text" name="firstname" placeholder="First name.." required/><br/>
+                    <span>Last name</span><br/>
+                    <input type="text" name="lastname" placeholder="Last name.." required/><br/>
+                    <span>Email</span><br/>
+                    <input type="email" name="email" placeholder="Email .."  required/><br/>
+                    <span>Address</span><br/>
+                    <input type="text" name="address" placeholder="Address.." required/><br/>
+                    <span>City</span><br/>
+                    <input type="text" name="city" placeholder="City.." required/><br/>
+                    <span>Phone</span><br/>
+                    <input type="tel" name="telephone" placeholder="Telephone.."  required/><br/>
+                </form>
+                <a href="/agree"><button class="add-to-cart_gh col-xs-3" name="Submit" onclick="dongydathang()">AGREE TO ORDER</button></a>
+                </article>
+                <aside class="sidebar">
+                </aside>
             </div>
         </aside>
     </div>
@@ -55,19 +62,19 @@
 </footer>
 </body>
 <script type="text/javascript">
-    function cong(){
-        // for (let i=0;i<giohangcart.length;i++) {
-            var t = document.getElementById("textbox").value;
-            document.getElementById("textbox").value = parseInt(t) + 1;
-        // }
+    function cong_cart(){
+        for (let i=0;i<giohangcart.length;i++) {
+            var t = document.getElementById(""+ giohangcart[i][8] +"").value;
+            document.getElementById(""+ giohangcart[i][8] +"").value = parseInt(t) + 1;
+        }
     }
-    function tru(){
-        // for (let i=0;i<giohangcart.length;i++) {
-            var t = document.getElementById("textbox").value;
+    function tru_cart(){
+        for (let i=0;i<giohangcart.length;i++) {
+            var t = document.getElementById(""+ giohangcart[i][8] +"").value;
             if (parseInt(t)>1){
-                document.getElementById("textbox").value=parseInt(t)-1;
+                document.getElementById(""+ giohangcart[i][8] +"").value=parseInt(t)-1;
             }
-        // }
+        }
     }
 
     var ghcart = localStorage.getItem("giohang");
@@ -76,15 +83,18 @@
         var ttgh = "";
         var total = 0;
         var tt = 0;
+        var price_sale = 0;
         for (let i=0;i<giohangcart.length;i++){
             if(giohangcart[i][6] == ""){
-                tt = parseInt(giohangcart[i][5]) * parseInt(giohangcart[i][7]);
+                price_sale = parseInt(giohangcart[i][5]);
+                tt = price_sale * parseInt(giohangcart[i][7]);
             }else {
-                tt = (parseInt(giohangcart[i][5])-parseInt(giohangcart[i][5])*parseInt(giohangcart[i][6])/100) * parseInt(giohangcart[i][7]);
+                price_sale = parseInt(giohangcart[i][5])-parseInt(giohangcart[i][5])*parseInt(giohangcart[i][6])/100
+                tt = price_sale * parseInt(giohangcart[i][7]);
             }
             total+=tt;
             ttgh+= "<div class=\"img\">\n" +
-                "        <img src=\""+giohangcart[i][0]+"\" width=\"250px\" height=\"255px\" alt=\"\" >\n" +
+                "        <img src=\""+giohangcart[i][0]+"\" width=\"200px\" height=\"205px\" alt=\"\" >\n" +
                 "    </div>\n" +
                 "   <div class=\"closesp\">\n" +
                 "        <a href=\"#\" onclick=\"closesp()\">&#10005</a>\n" +
@@ -92,10 +102,11 @@
                 "    <div class=\"thongtin\">\n" +
                 "        <h3>"+giohangcart[i][1]+"</h3>\n" +
                 "        <p>"+giohangcart[i][2]+"</p>\n" +
-                "        <h4><span>$</span>"+ tt +"</h4>\n" +
-                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru(this)\" value=\"-\">\n" +
-                "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohangcart[i][7] +"\" id=\"textbox\">\n" +
-                "        <input class=\"plus is-form\" onclick=\"cong(this)\" type=\"button\" value=\"+\">\n" +
+                "        <h4><span>$</span>"+ price_sale +"</h4>\n" +
+                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru_cart(this)\" value=\"-\">\n" +
+                "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohangcart[i][7] +"\" id=\""+ giohangcart[i][8] +"\">\n" +
+                "        <input class=\"plus is-form\" onclick=\"cong_cart(this)\" type=\"button\" value=\"+\">\n" +
+                "        <h4><span>Total : $</span>"+ tt +"</h4>\n" +
                 "    </div>";
         }
         ttgh += "<div class=\"total\">\n" +
@@ -104,5 +115,43 @@
         document.getElementById("showmycart").innerHTML = ttgh;
     }
     showmycart();
+
+    function dongydathang(){
+        var ttnh = document.getElementById("agree").children;
+        var Firstname = ttnh[0].children[2].value;
+        // alert(ttnh[0].children[18].value);
+        var Lastname = ttnh[0].children[6].value;
+        var email = ttnh[0].children[10].value;
+        var address = ttnh[0].children[14].value;
+        var city = ttnh[0].children[18].value;
+        var phone = ttnh[0].children[22].value;
+        var nguoinhan = new Array(Firstname,Lastname,email,address,city,phone);
+        console.log(nguoinhan);
+        sessionStorage.setItem("nguoinhan",JSON.stringify(nguoinhan));
+        // window.location.assign("order.ejs");
+    }
+    dongydathang();
+    function showthongtinnguoinhan(){
+        var nguoinhan = sessionStorage.getItem("nguoinhan");
+        var thongtin = JSON.parse(nguoinhan);
+        var tt="<tr>\n" +
+            "                        <td >NAME</td>\n" +
+            "                        <td>"+thongtin[0]+" "+thongtin[1]+"</td>\n" +
+            "                    </tr>\n" +
+            "                    <tr>\n" +
+            "                        <td>EMAIL</td>\n" +
+            "                        <td>"+thongtin[2]+"</td>\n" +
+            "                    </tr>\n" +
+            "                    <tr>\n" +
+            "                        <td>ADDRESS</td>\n" +
+            "                        <td>"+thongtin[3]+" "+thongtin[4]+"</td>\n" +
+            "                    </tr>\n" +
+            "                    <tr>\n" +
+            "                        <td>PHONE</td>\n" +
+            "                        <td>"+thongtin[5]+"</td>\n" +
+            "                    </tr>";
+        document.getElementById("thongtinnhanhang").innerHTML = tt;
+    }
+    showthongtinnguoinhan();
 </script>
 </html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AGREE</title>
+    <%- include("head.ejs") %>
+    <link rel="stylesheet" href="/css/giohang.css">
+</head>
+<body>
+<header class="header section">
+    <%- include("header.ejs") %>
+</header>
+<section class="main section">
+    <div class="container_cart">
+        <div class="entry">
+            <h1>Your order</h1>
+            <ul class="logo_cart">
+                <a href="/">Home</a><span>/Your order</span>
+            </ul>
+        </div>
+    </div>
+    <div class="container_cart_order">
+        <article class="content_cart_order">
+            <div class="block black">
+                <h2>Delivery information</h2>
+            </div>
+            <table class="thongtinnhanhang">
+                <tbody id="thongtinnhanhang">
+
+                </tbody>
+            </table>
+            <div class="row mb">
+                <div class="block black">
+                    <h2>CART</h2>
+                </div>
+                <table>
+                    <tr>
+                        <th>Number</th>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total($)</th>
+                    </tr>
+                    <tbody id="mycart">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="block black">
+                <h2>THANK YOU FOR BUYING!</h2>
+            </div>
+            <div class="thanhtoan">
+                <a href="/shop?AllProduct"><button class="add-to-cart_cart container col-xs-3" onclick="resetcart()">CONTINUE SHOPPING</button></a>
+            </div>
+        </article>
+    </div>
+</section>
+<footer class="footer section">
+    <%- include("footer.ejs") %>
+</footer>
+</body>
+<script type="text/javascript">
+    function showthongtinnguoinhan(){
+        var nguoinhan = sessionStorage.getItem("nguoinhan");
+        var thongtin = JSON.parse(nguoinhan);
+        var tt="<tr>\n" +
+            "                        <td >NAME</td>\n" +
+            "                        <td>"+thongtin[0]+" "+thongtin[1]+"</td>\n" +
+            "                    </tr>\n" +
+            "                    <tr>\n" +
+            "                        <td>EMAIL</td>\n" +
+            "                        <td>"+thongtin[2]+"</td>\n" +
+            "                    </tr>\n" +
+            "                    <tr>\n" +
+            "                        <td>ADDRESS</td>\n" +
+            "                        <td>"+thongtin[3]+" "+thongtin[4]+"</td>\n" +
+            "                    </tr>\n" +
+            "                    <tr>\n" +
+            "                        <td>PHONE</td>\n" +
+            "                        <td>"+thongtin[5]+"</td>\n" +
+            "                    </tr>";
+        document.getElementById("thongtinnhanhang").innerHTML = tt;
+    }
+    showthongtinnguoinhan();
+    var ghorde = localStorage.getItem("giohang");
+    var giohangorde = JSON.parse(ghorde);
+    function showcartorder(){
+        var ttgh = "";
+        var total = 0;
+        var tt = 0;
+        var price_sale = 0;
+        for (let i=0;i<giohangorde.length;i++){
+            if(giohangorde[i][6] == ""){
+                price_sale = parseInt(giohangorde[i][5]);
+                tt = price_sale * parseInt(giohangorde[i][7]);
+            }else {
+                price_sale = parseInt(giohangorde[i][5])-parseInt(giohangorde[i][5])*parseInt(giohangorde[i][6])/100
+                tt = price_sale * parseInt(giohangorde[i][7]);
+            }
+            total+=tt;
+            ttgh+="<tr>\n" +
+                "                        <th>"+(i+1)+"</th>\n" +
+                "                        <th><img src=\""+giohangorde[i][0]+"\" width=\"100px\" height=\"105px\" alt=\"\" ></th>\n" +
+                "                        <th>"+giohangorde[i][1]+"</th>\n" +
+                "                        <th>"+giohangorde[i][5]+"</th>\n" +
+                "                        <th>"+ giohangorde[i][7] +"</th>\n" +
+                "                        <th>"+tt+"</th>\n" +
+                "                    </tr>";
+        }
+        ttgh += "<div class=\"total\">\n" +
+            "        <h4>Total : $"+ total +"</h4>\n" +
+            "    </div>";
+        document.getElementById("mycart").innerHTML = ttgh;
+    }
+    showcartorder();
+    function resetcart(){
+        localStorage.clear();
+    }
+    resetcart();
+</script>
+</html>
