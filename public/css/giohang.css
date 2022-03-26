@@ -391,6 +391,10 @@ tr th {
     margin-left: 10px;
     cursor: pointer;
 }
+.img-slide img{
+    margin: 5px 1px;
+    border: 1px solid #b2b0b0;
+}
 .thanhtoan-order{
     margin-left: -220px;
 

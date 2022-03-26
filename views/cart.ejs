@@ -99,7 +99,7 @@
                 "        <img src=\""+giohangcart[i][0]+"\" width=\"150px\" height=\"155px\" alt=\"\" >\n" +
                 "    </div>\n" +
                 "   <div class=\"closesp\">\n" +
-                "        <a href=\"#\" onclick=\"closesp()\">&#10005</a>\n" +
+                "        <a href=\"cart\" onclick=\"closesp()\">&#10005</a>\n" +
                 "    </div>\n" +
                 "    <div class=\"thongtin\">\n" +
                 "        <h3>"+giohangcart[i][1]+"</h3>\n" +
@@ -155,5 +155,12 @@
         document.getElementById("thongtinnhanhang").innerHTML = tt;
     }
     showthongtinnguoinhan();
+    function closesp(id) {
+        giohangcart = localStorage.getItem("giohang") ? JSON.parse(localStorage.getItem("giohang")) :[];
+        giohangcart.splice(id, 1);
+        localStorage.setItem("giohang", JSON.stringify(giohangcart));
+        showmycart();
+    }
+
 </script>
 </html>
