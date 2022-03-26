@@ -62,17 +62,19 @@
 </footer>
 </body>
 <script type="text/javascript">
-    function cong_cart(){
+    function cong_cart(id){
         for (let i=0;i<giohangcart.length;i++) {
-            var t = document.getElementById(""+ giohangcart[i][8] +"").value;
-            document.getElementById(""+ giohangcart[i][8] +"").value = parseInt(t) + 1;
+            var t = document.getElementById(giohangcart[i][8]).value;
+            // console.log(id);
+            // console.log(giohangcart[i][8]);
+            document.getElementById(giohangcart[i][8]).value = parseInt(t) +1;
         }
     }
-    function tru_cart(){
+    function tru_cart(id){
         for (let i=0;i<giohangcart.length;i++) {
-            var t = document.getElementById(""+ giohangcart[i][8] +"").value;
+            var t = document.getElementById(giohangcart[i][8]).value;
             if (parseInt(t)>1){
-                document.getElementById(""+ giohangcart[i][8] +"").value=parseInt(t)-1;
+                document.getElementById(giohangcart[i][8]).value=parseInt(t)-1;
             }
         }
     }
@@ -103,9 +105,9 @@
                 "        <h3>"+giohangcart[i][1]+"</h3>\n" +
                 "        <p>"+giohangcart[i][2]+"</p>\n" +
                 "        <h4><span>$</span>"+ price_sale +"</h4>\n" +
-                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru_cart(this)\" value=\"-\">\n" +
+                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru_cart('"+giohangcart[i][8]+"')\" value=\"-\" >\n" +
                 "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohangcart[i][7] +"\" id=\""+ giohangcart[i][8] +"\">\n" +
-                "        <input class=\"plus is-form\" onclick=\"cong_cart(this)\" type=\"button\" value=\"+\">\n" +
+                "        <input class=\"plus is-form\" onclick=\"cong_cart('"+giohangcart[i][8]+"')\" type=\"button\" value=\"+\" >\n" +
                 "        <h4><span>Total : $</span>"+ tt +"</h4>\n" +
                 "    </div>";
         }

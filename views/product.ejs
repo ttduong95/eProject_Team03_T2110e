@@ -42,8 +42,15 @@
 <section class="container product ">
     <div class="boxsp">
         <div class="col-xs-6 big-image">
-            <img src="<%= product.Img1 %>" width="450" height="455"/>
-            <span class="id_an"><%= product.ID %></span>
+            <img src="<%= product.Img1 %>" width="450" height="455" class="main-img" id="main-img"/>
+                <div class="img-slide">
+                <img src="imge/product14-1.jpg" width="100" height="105" onclick="changeimage('one')" id="one"/>
+                <img src="imge/product16-1.jpg" width="100" height="105" onclick="changeimage('two')" id="two"/>
+                <img src="imge/product11-1.jpg" width="100" height="105" onclick="changeimage('three')" id="three"/>
+                <img src="imge/product2-1.jpg" width="100" height="105" onclick="changeimage('four')" id="four"/>
+                <img src="<%= product.Img1 %>" width="100" height="105"  onclick="changeimage('five')" id="five"/>
+                <span class="id_an"><%= product.ID %></span>
+                </div>
         </div>
         <div class="col-xs-6 details">
             <div class="title"> <h1><%= product.NameProduct %></h1>
@@ -255,6 +262,10 @@
             "    </div>";
         document.getElementById("showcart").innerHTML = ttgh;
         showcountsp();
+    }
+    function changeimage(id){
+        let imagepath = document.getElementById(id).getAttribute('src');
+        document.getElementById('main-img').setAttribute('src', imagepath);
     }
 </script>
 </html>

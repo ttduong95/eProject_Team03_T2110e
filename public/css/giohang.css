@@ -318,7 +318,7 @@ p .btn-default{
     height: 45px;
 }
 .row{
-    padding-left: 25px;
+    padding-left: 0;
 }
 /*thong tin nhan hang*/
 .agree tr td {
@@ -347,7 +347,7 @@ p .btn-default{
 .thongtinnhanhang tr td {
     text-align: left;
     padding: 10px;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
     margin-left: 0;
     font-weight: 500;
@@ -364,21 +364,50 @@ table {
 }
 
 tr th {
-    background-color: #999;
+    background-color: #d3d1d1;
     padding: 10px;
     font-size: 18px;
     font-family: "Roboto", sans-serif;
-}
-td {
-    border: 1px #CCC solid;
-    text-align: center;
-    font-size: 16px;
+    border: 1px #8d8c8c solid;
 }
 .mycart th{
     background-color: white;
-    border: 1px #CCC solid;
+    border: 1px #8d8c8c solid;
 }
+.mycart th{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 
+}
+.big-image{
+
+}
+.main-img{
+    margin: 5px 40px;
+
+}
+.img-slide{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.thanhtoan-order{
+    margin-left: -220px;
+
+}
+.thanhtoan-order button{
+    font-size: 20px;
+    width: auto;
+    padding: 15px;
+    text-align: center;
+    line-height: 0.6;
+}
+.thank-you h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 20px 0;
+}
 
 
 /*tang giam so luong*/
