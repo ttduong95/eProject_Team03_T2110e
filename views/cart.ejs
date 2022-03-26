@@ -28,6 +28,7 @@
             </div>
             <div class="thanhtoan">
                 <a href="/shop?AllProduct"><button class="add-to-cart_cart container col-xs-3">CONTINUE SHOPPING</button></a>
+                <a href="/cart"><button class="add-to-cart_cart container col-xs-3" onclick="updatecart()" >UPDATE CART</button></a>
             </div>
         </article>
         <aside class="sidebar_cart">
@@ -63,20 +64,14 @@
 </body>
 <script type="text/javascript">
     function cong_cart(id){
-        for (let i=0;i<giohangcart.length;i++) {
-            var t = document.getElementById(giohangcart[i][8]).value;
-            // console.log(id);
-            // console.log(giohangcart[i][8]);
-            document.getElementById(giohangcart[i][8]).value = parseInt(t) +1;
-        }
+            var t = document.getElementById(id).value;
+            document.getElementById(id).value = parseInt(t) +1;
     }
     function tru_cart(id){
-        for (let i=0;i<giohangcart.length;i++) {
-            var t = document.getElementById(giohangcart[i][8]).value;
+            var t = document.getElementById(id).value;
             if (parseInt(t)>1){
-                document.getElementById(giohangcart[i][8]).value=parseInt(t)-1;
+                document.getElementById(id).value=parseInt(t)-1;
             }
-        }
     }
 
     var ghcart = localStorage.getItem("giohang");
@@ -106,9 +101,9 @@
                 "        <h3>"+giohangcart[i][1]+"</h3>\n" +
                 "        <p>"+giohangcart[i][2]+"</p>\n" +
                 "        <h4><span>$</span>"+ price_sale +"</h4>\n" +
-                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru_cart('"+giohangcart[i][8]+"')\" value=\"-\" >\n" +
-                "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohangcart[i][7] +"\" id=\""+ giohangcart[i][8] +"\">\n" +
-                "        <input class=\"plus is-form\" onclick=\"cong_cart('"+giohangcart[i][8]+"')\" type=\"button\" value=\"+\" >\n" +
+                "        <input class=\"minus is-form\" type=\"button\" onclick=\"tru_cart('"+stt+"')\" value=\"-\" >\n" +
+                "        <input aria-label=\"quantity\" class=\"input-qty\" max=\"10\" min=\"1\" name=\"\" type=\"number\" value=\""+ giohangcart[i][7] +"\" id=\""+ stt +"\">\n" +
+                "        <input class=\"plus is-form\" onclick=\"cong_cart('"+stt+"')\" type=\"button\" value=\"+\" >\n" +
                 "        <h4><span>Total : $</span>"+ tt +"</h4>\n" +
                 "    </div>";
         }
@@ -162,6 +157,10 @@
         localStorage.setItem("giohang", JSON.stringify(giohangcart));
         showmycart();
     }
-
+    // function updatecart(){
+    //     for (let i = 0; i<giohangcart.length; i++){
+    //
+    //     }
+    // }
 </script>
 </html>
