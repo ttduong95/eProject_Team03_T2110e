@@ -87,6 +87,7 @@
         var tt = 0;
         var price_sale = 0;
         for (let i=0;i<giohangcart.length;i++){
+            var stt = i;
             if(giohangcart[i][6] == ""){
                 price_sale = parseInt(giohangcart[i][5]);
                 tt = price_sale * parseInt(giohangcart[i][7]);
@@ -98,8 +99,8 @@
             ttgh+= "<div class=\"img\">\n" +
                 "        <img src=\""+giohangcart[i][0]+"\" width=\"150px\" height=\"155px\" alt=\"\" >\n" +
                 "    </div>\n" +
-                "   <div class=\"closesp\">\n" +
-                "        <a href=\"cart\" onclick=\"closesp()\">&#10005</a>\n" +
+                "   <div class=\"closesp\" >\n" +
+                "        <a href=\"cart\" onclick=\"closesp('"+stt+"')\" >&#10005</a>\n" +
                 "    </div>\n" +
                 "    <div class=\"thongtin\">\n" +
                 "        <h3>"+giohangcart[i][1]+"</h3>\n" +
