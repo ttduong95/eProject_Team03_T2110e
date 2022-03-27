@@ -66,7 +66,6 @@ app.get("/shop",function (req, res) {
                 });
             }
         });
-
     })
 
 app.get("/product",function (req, res) {
@@ -121,6 +120,15 @@ app.get("/shop-material",function (req, res) {
         if(err) console.log(err);
         else res.render("Material",{
             material:rs,
+        });
+    })
+})
+app.get("/shop-price",function (req, res) {
+    var sql_txt = "select * from T2110E_Nhom3_Products order by Price asc;";
+    conn.query(sql_txt,function (err,rs){
+        if(err) console.log(err);
+        else res.render("price",{
+            price:rs,
         });
     })
 })
