@@ -139,7 +139,7 @@
                 <form action="#" method="get">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="email" class="form-control" placeholder="Enter your name" required>
+                        <input type="text" class="form-control" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
@@ -149,8 +149,7 @@
                         <label>Rating</label>
                         <br>
                         <div class="stars">
-                            <form action="#" method="get">
-                                <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                <input class="star star-5" id="star-5" type="radio" name="star" required/>
                                 <label class="star star-5" for="star-5"></label>
                                 <input class="star star-4" id="star-4" type="radio" name="star"/>
                                 <label class="star star-4" for="star-4"></label>
@@ -160,12 +159,11 @@
                                 <label class="star star-2" for="star-2"></label>
                                 <input class="star star-1" id="star-1" type="radio" name="star"/>
                                 <label class="star star-1" for="star-1"></label>
-                            </form>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Review Title</label>
-                        <input type="email" class="form-control" placeholder="Give your review a title" required/>
+                        <input type="text" class="form-control" placeholder="Give your review a title" required/>
                     </div>
                     <div class="form-group">
                         <label>Body of Review</label>

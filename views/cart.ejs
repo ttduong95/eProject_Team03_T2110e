@@ -36,7 +36,7 @@
                 <h2>Delivery information</h2>
             </div>
             <div class="row" id="agree">
-                <form action="#" method="get" class="form_cart">
+                <form action="/agree" method="get" class="form_cart">
                     <span>First name</span><br/>
                     <input class="input_from" type="text" name="firstname" placeholder="First name.." required/><br/>
                     <span>Last name</span><br/>
@@ -49,8 +49,8 @@
                     <input class="input_from" type="text" name="city" placeholder="City.." required/><br/>
                     <span>Phone</span><br/>
                     <input class="input_from" type="tel" name="telephone" placeholder="Telephone.."  required/><br/>
+                    <button class="add-to-cart_gh col-xs-3" name="Submit" onclick="dongydathang()">AGREE TO ORDER</button>
                 </form>
-                <a href="/agree"><button class="add-to-cart_gh col-xs-3" name="Submit" onclick="dongydathang()">AGREE TO ORDER</button></a>
                 </article>
                 <aside class="sidebar">
                 </aside>
@@ -157,10 +157,12 @@
         localStorage.setItem("giohang", JSON.stringify(giohangcart));
         showmycart();
     }
-    // function updatecart(){
-    //     for (let i = 0; i<giohangcart.length; i++){
-    //
-    //     }
-    // }
+    function updatecart(){
+        var a = localStorage.getItem("giohang") ? JSON.parse(localStorage.getItem("giohang")) :[];
+        console.log(a);
+        for (let i = 0; i<giohangcart.length; i++){
+
+        }
+    }
 </script>
 </html>
