@@ -547,3 +547,6 @@ li.column{
 .blockimg:hover{
     filter: blur(0);
 }
+.add-to-cart_gh{
+    width: 300px;
+}
